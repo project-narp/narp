@@ -31,3 +31,7 @@ main>div {
   width: 60%;
   margin: auto;
 }
+
+#correct, #wrong {
+  display: none;
+}
