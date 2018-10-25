@@ -18,7 +18,7 @@ p {
   margin-bottom: 20px;
 }
 
-#explanation, #problem {
+main>div {
   width: 80%;
   margin: 0 auto 20px auto;
 }
@@ -30,4 +30,8 @@ p {
   padding: 10px;
   width: 60%;
   margin: auto;
+}
+
+#correct, #wrong {
+  display: none;
 }

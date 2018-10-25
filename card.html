@@ -8,33 +8,43 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Card</title>
 </head>
-<body>
+<body id="card">
   <header>
-    <h1 id="title">Order of Operations</h1>
+    <h1 id="title"></h1>
   </header>
   <main>
-    <div id="explanation">
-      <p>The logical operator || has the lowest precedence, followed by &&, then the comparison operators (>, ==, and so on), then the rest.</p>
+    <div>
+      <p id="explanation"></p>
       <div class="code">
-        <code>
-          2 * 0 || true == false
-          <br>
-          // → false
-        </code>
+        <code id="example"></code>
       </div>
-      
     </div>
-    <div id="problem">
-      <p>What does this evaluate to?</p>
+
+    <div>
+      <p id="question"></p>
       <div class="code">
-        <code>1 + 1 == 2 && 10 * 10 > 50</code>
+        <code id="problem"></code>
       </div>
-      
     </div>
-    <form>
-      <input type="text">
-      <button>Submit</button>
-    </form>
+
+    <div>
+      <form>
+        <input name="answer" type="text">
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div id="correct">
+      <h3>Correct!</h3>
+      <a href="#">Next</a>
+    </div>
+    <div id="wrong">
+      <h3>Wrong</h3>
+      <p>Try again</p>
+    </div>
   </main>
+
+  <script src="js/allCards.js"></script>
+  <script src="js/card.js"></script>
 </body>
 </html>
