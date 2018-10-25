@@ -4,10 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Card</title>
 </head>
 <body>
-  
+  <header>
+    <h1 id="title">Order of Operations</h1>
+  </header>
+  <main>
+    <div id="explanation">
+      <p>The logical operator || has the lowest precedence, followed by &&, then the comparison operators (>, ==, and so on), then the rest.</p>
+      <div class="code">
+        <code>
+          2 * 0 || true == false
+          <br>
+          // → false
+        </code>
+      </div>
+      
+    </div>
+    <div id="problem">
+      <p>What does this evaluate to?</p>
+      <div class="code">
+        <code>1 + 1 == 2 && 10 * 10 > 50</code>
+      </div>
+      
+    </div>
+    <form>
+      <input type="text">
+      <button>Submit</button>
+    </form>
+  </main>
 </body>
 </html>
