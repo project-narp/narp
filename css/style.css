@@ -35,3 +35,16 @@ main>div {
 #correct, #wrong {
   display: none;
 }
+
+#correct {
+  color: green;
+}
+
+#wrong {
+  color: red;
+}
+
+h3 {
+  font-size: 150%;
+  margin-bottom: 10px;
+}

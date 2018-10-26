@@ -6,7 +6,8 @@ var cardIndex = 0;
 // ===============================================
 // RENDER CARD
 // ===============================================
-var renderCard = function(card) {
+var renderCard = function() {
+  var card = allCards[cardIndex];
   var title = document.getElementById('title');
   title.textContent = card.title;
 
@@ -21,22 +22,27 @@ var renderCard = function(card) {
 
   var problem = document.getElementById('problem');
   problem.innerHTML = card.problem;
+
+  // clear input
+  document.getElementById('form').children[0].value = '';
+
+  // hide correct response
+  document.getElementById('correct').style.display = 'none';
 };
 
-renderCard(allCards[cardIndex]);
+renderCard();
 
 
 // ===============================================
-// EVENT
+// FORM EVENT
 // ===============================================
 var form = document.getElementById('form');
 
-var handler = function(event) {
+var formHandler = function(event) {
   event.preventDefault();
   event.stopPropagation();
 
   var response = event.target.answer.value;
-  console.log(response);
 
   // correct answer
   if (response === allCards[cardIndex].solution) {
@@ -49,4 +55,20 @@ var handler = function(event) {
   }
 };
 
-form.addEventListener('submit', handler);
+form.addEventListener('submit', formHandler);
+
+
+// ===============================================
+// NEXT EVENT
+// ===============================================
+var next = document.getElementById('next');
+
+var nextHandler = function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+
+  cardIndex++;
+  renderCard();
+};
+
+next.addEventListener('click', nextHandler);
