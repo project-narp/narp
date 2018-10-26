@@ -29,7 +29,7 @@ var allCards = [
     example: `
     console.log(typeof {a : "apple", b : "banana", c : "cake"}) <br>
     // → "Object"`,
-    question: 'what does this typeof evaluate to?',
+    question: 'What does this typeof evaluate to?',
     problem: 'typeof [1,2,3]',
     solution: 'object',
     solved: false
@@ -40,16 +40,16 @@ var allCards = [
     example: `
     console.log(3 > 7) <br>
     // → false`,
-    question: 'which boolean does the following evaluate to?',
+    question: 'Which boolean does the following evaluate to?',
     problem: 'console.log(6 + 5 > 11 - 1)',
     solution: 'true',
     solved: false
   },
   {
-    title: 'string concatenation',
-    explanation: 'strings can add together with by adding them together with the + operator, but you can only add strings',
+    title: 'String concatenation',
+    explanation: 'Strings can add together with by adding them together with the + operator, but you can only add strings',
     example: "'se' + 'at' + 'tle' + ' ' + 'sea' + 'ha' + 'wks' evaluates to seattle seahawks",
-    question: 'what does the following string concatenation evaluate to?',
+    question: 'What does the following string concatenation evaluate to?',
     problem: ' Russel' + ' ' + 'Wilson' + ' ' + 'is' + ' ' + 'GOAT',
     solution: 'Russel Wilson is GOAT',
     solved: false
