@@ -1,12 +1,11 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px auto;
   width: 50%;
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
-  margin-top: 30px;
 }
 
 h1 {
@@ -23,8 +22,11 @@ main>div {
   margin: 0 auto 20px auto;
 }
 
-.code {
+code {
   font-family: 'Courier New', Courier, monospace;
+}
+
+.code {
   text-align: left;
   border: 1px solid darkgray;
   padding: 10px;

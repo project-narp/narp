@@ -1,7 +1,15 @@
 'use strict';
 
-// globals
-var cardIndex = 0;
+// ===============================================
+// CARD INDEX LOCAL STORAGE
+// ===============================================
+var cardIndex;
+if (!localStorage.getItem('cardIndex')){
+  cardIndex = 0;
+  localStorage.setItem('cardIndex', 0);
+} else {
+  cardIndex = localStorage.getItem('cardIndex');
+}
 
 // ===============================================
 // RENDER CARD
@@ -12,13 +20,13 @@ var renderCard = function() {
   title.textContent = card.title;
 
   var explanation = document.getElementById('explanation');
-  explanation.textContent = card.explanation;
+  explanation.innerHTML = card.explanation;
 
   var example = document.getElementById('example');
   example.innerHTML = card.example;
 
   var question = document.getElementById('question');
-  question.textContent = card.question;
+  question.innerHTML = card.question;
 
   var problem = document.getElementById('problem');
   problem.innerHTML = card.problem;
@@ -68,6 +76,7 @@ var nextHandler = function(event) {
   event.stopPropagation();
 
   cardIndex++;
+  localStorage.setItem('cardIndex', cardIndex);
   renderCard();
 };
 
