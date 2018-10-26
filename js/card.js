@@ -40,6 +40,7 @@ var handler = function(event) {
 
   // correct answer
   if (response === allCards[cardIndex].solution) {
+    allCards[cardIndex].solved = true;
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
   } else {
