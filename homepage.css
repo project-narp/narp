@@ -26,3 +26,7 @@ article {
     margin-top: 50px;
     font-family: 'Francois One', sans-serif;
 }
+
+main li{
+    display: block;    
+}
