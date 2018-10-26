@@ -18,5 +18,32 @@ var allCards = [
     problem: 'a third of 99 is ${99 / 3}',
     solution: 'a third of 99 is 33',
     solved: false
+  },
+  {
+    title: 'Unary Operators',
+    explanation: 'typeof is an operator which evaluates to a string of the type of value passed to it',
+    example: 'console.log(typeof {a : "apple", b : "banana", c : "cake"})',
+    question: 'what does this typeof evaluate to?',
+    problem: 'typeof [1,2,3]',
+    solution: 'object',
+    solved: false
+  },
+  {
+    title: 'Boolean',
+    explanation: 'Booleans are like an on or off switch, with only two possibilities, true or false',
+    example: 'console.log(3 < 7)',
+    question: 'which boolean does the following evaluate to?',
+    problem: 'console.log(6 + 5 > 11 - 1)',
+    solution: 'true',
+    solved: false
+  },
+  {
+    title: 'string concatenation',
+    explanation: 'strings can add together with by adding them together with the + operator, but you can only add strings',
+    example: "'se' + 'at' + 'tle' + ' ' + 'sea' + 'ha' + 'wks' evaluates to seattle seahawks",
+    question: 'what does the following string concatenation evaluate to?',
+    problem: ' Russel' + ' ' + 'Wilson' + ' ' + 'is' + ' ' + 'GOAT',
+    solution: 'Russel Wilson is GOAT',
+    solved: false
   }
 ];
