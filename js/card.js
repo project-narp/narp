@@ -1,5 +1,11 @@
 'use strict';
 
+// globals
+var cardIndex = 0;
+
+// ===============================================
+// RENDER CARD
+// ===============================================
 var renderCard = function(card) {
   var title = document.getElementById('title');
   title.textContent = card.title;
@@ -17,22 +23,29 @@ var renderCard = function(card) {
   problem.innerHTML = card.problem;
 };
 
-renderCard(allCards[0]);
+renderCard(allCards[cardIndex]);
 
-console.log('hello');
 
+// ===============================================
+// EVENT
+// ===============================================
 var form = document.getElementById('form');
-var HardCodedCorrectAnswerExample = true;
-
 
 var handler = function(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  var response = event.target['answer'].value;
+  var response = event.target.answer.value;
   console.log(response);
-  console.log('anything');
+
+  // correct answer
+  if (response === allCards[cardIndex].solution) {
+    document.getElementById('wrong').style.display = 'none';
+    document.getElementById('correct').style.display = 'block';
+  } else {
+    document.getElementById('correct').style.display = 'none';
+    document.getElementById('wrong').style.display = 'block';
+  }
 };
 
 form.addEventListener('submit', handler);
-
