@@ -1,0 +1,11 @@
+
+main li{
+    display: block;
+    width: 100px;
+    height: 25px;
+    background-color: #625D5D;
+    margin: 35px auto;
+    padding: 25px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
