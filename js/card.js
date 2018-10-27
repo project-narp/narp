@@ -60,6 +60,7 @@ var formHandler = function(event) {
 
   // correct answer
   if (response === allCards[cardIndex].solution) {
+    // update solved boolean and save to localStorage
     allCards[cardIndex].solved = true;
     localStorage.setItem('allCards', JSON.stringify(allCards));
 
@@ -85,7 +86,8 @@ var nextHandler = function(event) {
 
   cardIndex++;
   localStorage.setItem('cardIndex', cardIndex);
-  renderCard();
+  // renderCard();
+  location.reload();
 };
 
 next.addEventListener('click', nextHandler);
