@@ -15,18 +15,22 @@ var subRenderFunc = function () {
     subButt.textContent = allCards[i].title;
     if(allCards[i].solved){
       subButt.setAttribute('class', 'solved');
-    };
+    }
     subList.appendChild(subButt);
   }
+  var addButt = document.createElement('li');
+  addButt.textContent = '+';
+  addButt.setAttribute('id', 'add');
+  subList.appendChild(addButt);
 };
 subRenderFunc();
 //
 var clickHandFunc = function(event){
-  if(event.target.id){
-    console.log(event.target.id);
+  if(event.target.id === 'add'){
+    window.location.href = 'newCard.html';
+  } else if(event.target.id){
     localStorage.setItem('cardIndex', event.target.id);
-    window.location.href = 'card.html';
-  }
+    window.location.href = 'card.html';}
 };
 subList.addEventListener('click', clickHandFunc);
 
