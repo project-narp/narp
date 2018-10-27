@@ -11,16 +11,15 @@ h1{
     margin-bottom: 75px;
     font-style: bold;
 }
-ul {
+li {
+    display: inline-block;
     background-color: black;
     color: white;
     list-style-type: none;
-    padding: 14px 16px;
-    margin-top: 20px;
-}
-li {
-    display: inline-block;
-    padding-right: 20px;
+    margin-top: 10px;
+    width: 230px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 li a{
     color: white;
@@ -31,6 +30,10 @@ li a:visited {
 
 article {
     padding: 10px;
-    margin-top: 50px;
+    margin-top: 15px;
     font-family: 'Francois One', sans-serif;
+}
+
+main li{
+    display: block;    
 }
