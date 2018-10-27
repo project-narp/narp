@@ -85,6 +85,10 @@ var nextHandler = function(event) {
   event.stopPropagation();
 
   cardIndex++;
+  if (cardIndex >= allCards.length) {
+    window.location.href = 'sub.html';
+    return;
+  }
   localStorage.setItem('cardIndex', cardIndex);
   // renderCard();
   location.reload();
