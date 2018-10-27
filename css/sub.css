@@ -14,9 +14,10 @@ main li{
 .solved{
     color: hotpink;
 }
-main ul{
-    width: 100%;
+main button{
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 25px;
 }
 #add{
-    font-size: 2.5em;
 }
