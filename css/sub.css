@@ -1,0 +1,22 @@
+
+main li{
+    display: inline-block;
+    width: 95px;
+    height: 30px;
+    background-color: #625D5D;
+    margin: 10px;
+    padding: 10px 10px 15px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 5px 3px 5px grey;
+    text-align: center;
+}
+.solved{
+    color: hotpink;
+}
+main ul{
+    width: 100%;
+}
+#add{
+    font-size: 2.5em;
+}
