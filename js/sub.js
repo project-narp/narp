@@ -14,7 +14,7 @@ subRenderFunc();
 var clickHandFunc = function(event){
   if(event.target.id){
     console.log(event.target.id);
-    localStorage.setItem('cardIndex', JSON.stringify(event.target.id));
+    localStorage.setItem('cardIndex', event.target.id);
     window.location.href = 'card.html';
   }
 };
