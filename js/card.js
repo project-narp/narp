@@ -1,14 +1,20 @@
 'use strict';
 
 // ===============================================
-// CARD INDEX LOCAL STORAGE
+// CARD INDEX AND ALLCARDS LOCAL STORAGE
 // ===============================================
 var cardIndex;
 if (!localStorage.getItem('cardIndex')){
   cardIndex = 0;
   localStorage.setItem('cardIndex', 0);
 } else {
-  cardIndex = localStorage.getItem('cardIndex');
+  cardIndex = Number(localStorage.getItem('cardIndex'));
+}
+
+if (!localStorage.getItem('allCards')){
+  localStorage.setItem('allCards', JSON.stringify(allCards));
+} else {
+  allCards = JSON.parse(localStorage.getItem('allCards'));
 }
 
 // ===============================================
@@ -55,6 +61,8 @@ var formHandler = function(event) {
   // correct answer
   if (response === allCards[cardIndex].solution) {
     allCards[cardIndex].solved = true;
+    localStorage.setItem('allCards', JSON.stringify(allCards));
+
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
   } else {
