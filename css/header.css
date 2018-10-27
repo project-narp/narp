@@ -35,3 +35,10 @@ li a{
 li a:visited {
     color: #DA2A27;
 }
+main div{
+    width: 100px;
+    display: inline-block;
+}
+main img{
+    width: 100px;
+}
