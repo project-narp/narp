@@ -1,7 +1,7 @@
 'use strict';
 
 // ===============================================
-// CARD INDEX AND ALLCARDS LOCAL STORAGE
+// CARDINDEX AND ALLCARDS LOCAL STORAGE
 // ===============================================
 var cardIndex;
 if (!localStorage.getItem('cardIndex')){
