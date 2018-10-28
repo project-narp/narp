@@ -2,35 +2,51 @@
 
 var cardForm = document.getElementById('cardForm');
 
-var generatedCards = [];
 
-
-var Card = function(title, explanantion, question, problem, answer){
+var Card = function(title, explanation, example, question, problem, solution, group){
   this.title = title;
-  this.explanantion = explanantion;
+  this.explanation = explanation;
+  this.example = example;
   this.question = question;
   this.problem = problem;
-  this.answer = answer;
+  this.solution = solution;
   this.solved = false;
-  generatedCards.push(this);
-
+  this.group = group;
 };
 
 var newCardHandler = function(event){
   event.preventDefault();
-  event.stopPropagation();  
+  event.stopPropagation();
+
   var cardTitle = event.target.title.value;
   console.log(cardTitle);
   var cardExplanation = event.target.explanation.value;
   console.log(cardExplanation);
+  var cardExample = event.target.example.value;
+  console.log(cardExample);
   var cardQuestion = event.target.question.value;
   console.log(cardQuestion);
   var cardProblem = event.target.problem.value;
   console.log(cardProblem);
-  var cardAnswer = event.target.answer.value;
-  console.log(cardAnswer);
-  new Card(cardTitle, cardExplanation, cardQuestion, cardProblem, cardAnswer);
+  var cardSolution = event.target.solution.value;
+  console.log(cardSolution);
+  var cardGroup = event.target.group.value;
 
+  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
+
+  // get allCards from localStorage and restore after updated
+  if (!localStorage.getItem('allCards')){
+    localStorage.setItem('allCards', JSON.stringify(allCards));
+  } else {
+    allCards = JSON.parse(localStorage.getItem('allCards'));
+  }
+  allCards.push(card);
+  localStorage.setItem('allCards', JSON.stringify(allCards));
+
+  // navigate to new card page (not sub.html anymore) after new card created
+  // window.location.href = 'sub.html';
+  localStorage.setItem('cardIndex', allCards.length - 1);
+  window.location.href = 'card.html';
 };
 
 cardForm.addEventListener('submit', newCardHandler);
