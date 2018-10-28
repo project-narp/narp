@@ -41,8 +41,10 @@ var newCardHandler = function(event){
   allCards.push(card);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 
-  // navigate to concepts page after new card created
-  window.location.href = 'sub.html';
+  // navigate to new card page (not sub.html anymore) after new card created
+  // window.location.href = 'sub.html';
+  localStorage.setItem('cardIndex', allCards.length - 1);
+  window.location.href = 'card.html';
 };
 
 cardForm.addEventListener('submit', newCardHandler);
