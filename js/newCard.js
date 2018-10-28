@@ -3,13 +3,13 @@
 var cardForm = document.getElementById('cardForm');
 
 
-var Card = function(title, explanation, example, question, problem, answer){
+var Card = function(title, explanation, example, question, problem, solution){
   this.title = title;
   this.explanation = explanation;
   this.example = example;
   this.question = question;
   this.problem = problem;
-  this.answer = answer;
+  this.solution = solution;
   this.solved = false;
 };
 
@@ -27,10 +27,10 @@ var newCardHandler = function(event){
   console.log(cardQuestion);
   var cardProblem = event.target.problem.value;
   console.log(cardProblem);
-  var cardAnswer = event.target.answer.value;
-  console.log(cardAnswer);
+  var cardSolution = event.target.solution.value;
+  console.log(cardSolution);
 
-  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardAnswer);
+  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution);
 
   // get allCards from localStorage and restore after updated
   if (!localStorage.getItem('allCards')){
