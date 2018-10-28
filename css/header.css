@@ -7,19 +7,27 @@ html {
     background-color: #625D5D;
 }
 h1{
-    font-size: 46px;
-    margin-bottom: 75px;
+    font-size: 36px;
     font-style: bold;
+    margin-left: 30px;
+    margin-right: 80px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+img {
+    margin-top: -30px;
+    width: 45px;
+    height: 50px;
+    margin-left: 250px; 
 }
 li {
     display: inline-block;
+    padding-right: 20px;
     background-color: black;
     color: white;
     list-style-type: none;
-    margin-top: 10px;
-    width: 230px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 12px 14px;
+    margin-top: -0px;
 }
 li a{
     color: white;
@@ -27,13 +35,10 @@ li a{
 li a:visited {
     color: #DA2A27;
 }
-
-article {
-    padding: 10px;
-    margin-top: 15px;
-    font-family: 'Francois One', sans-serif;
+main div{
+    width: 100px;
+    display: inline-block;
 }
-
-main li{
-    display: block;    
+main img{
+    width: 100px;
 }

@@ -2,7 +2,6 @@
 
 var cardForm = document.getElementById('cardForm');
 
-
 var Card = function(title, explanation, example, question, problem, solution, group){
   this.title = title;
   this.explanation = explanation;
@@ -33,6 +32,7 @@ var newCardHandler = function(event){
   var cardGroup = event.target.group.value;
 
   var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
+
 
   // get allCards from localStorage and restore after updated
   if (!localStorage.getItem('allCards')){

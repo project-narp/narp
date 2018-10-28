@@ -1,11 +1,21 @@
 
 main li{
-    display: block;
-    width: 100px;
-    height: 25px;
+    display: inline-block;
+    width: 95px;
+    height: 30px;
     background-color: #625D5D;
-    margin: 35px auto;
-    padding: 25px 16px;
-    border-radius: 10px;
+    margin: 10px;
+    padding: 10px 10px 15px 10px;
+    border-radius: 50px;
     cursor: pointer;
+    box-shadow: 5px 3px 5px grey;
+    text-align: center;
+}
+.solved{
+    color: hotpink;
+}
+main button{
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 25px;
 }

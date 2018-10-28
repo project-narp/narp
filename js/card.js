@@ -1,15 +1,22 @@
 'use strict';
 
 // ===============================================
-// CARD INDEX LOCAL STORAGE
+// CARDINDEX AND ALLCARDS FROM LOCAL STORAGE
 // ===============================================
 var cardIndex;
 if (!localStorage.getItem('cardIndex')){
   cardIndex = 0;
   localStorage.setItem('cardIndex', 0);
 } else {
-  cardIndex = localStorage.getItem('cardIndex');
+  cardIndex = Number(localStorage.getItem('cardIndex'));
 }
+
+if (!localStorage.getItem('allCards')){
+  localStorage.setItem('allCards', JSON.stringify(allCards));
+} else {
+  allCards = JSON.parse(localStorage.getItem('allCards'));
+}
+
 
 // ===============================================
 // RENDER CARD
@@ -54,7 +61,10 @@ var formHandler = function(event) {
 
   // correct answer
   if (response === allCards[cardIndex].solution) {
+    // update solved boolean and save to localStorage
     allCards[cardIndex].solved = true;
+    localStorage.setItem('allCards', JSON.stringify(allCards));
+
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
   } else {
@@ -76,8 +86,21 @@ var nextHandler = function(event) {
   event.stopPropagation();
 
   cardIndex++;
+  if (cardIndex >= allCards.length) {
+    window.location.href = 'sub.html';
+    return;
+  }
   localStorage.setItem('cardIndex', cardIndex);
-  renderCard();
+  // renderCard();
+  location.reload();
 };
 
 next.addEventListener('click', nextHandler);
+
+
+// ===============================================
+// MISC
+// ===============================================
+// prevent right clicking problem code
+var problem = document.getElementById('problem');
+problem.addEventListener('contextmenu', event => event.preventDefault());
