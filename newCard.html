@@ -7,10 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/newCard.css">
     <title> making new cards</title>
 </head>
 <body>
+    <script src="js/header.js"></script>
     <form id="cardForm">
         <fieldset>
             <legend> Make your new card</legend>
@@ -34,7 +36,12 @@
             <input type="text" name="solution"/>
 
             <label for="group"> Group</label>
-            <input type="text" name="group">
+            <select>
+                <option value="0">Fundamentals</option>
+                <option value="1">Control Flow</option>
+                <option value="2">Functions</option>
+                <option value="3">Data Structures</option>
+              </select>
 
             <button type="submit">Submit Form</button>
         </fieldset>

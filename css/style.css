@@ -1,3 +1,13 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #625D5D;
+}
+
+header li a{
+  color: rgb(155, 25, 22);
+  text-decoration: none;
+}
+
+header li a:hover {
+  color: #ddd;
 }
