@@ -1,4 +1,5 @@
 header {
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -29,13 +30,13 @@ header li {
     padding: 12px 14px;
     margin-top: -0px;
 }
-header li a{
+/* header li a{
     color: rgb(155, 25, 22);
     text-decoration: none;
 }
 header li a:hover {
     color: #ddd;
-}
+} */
 /* main div{
     width: 100px;
     display: inline-block;

@@ -49,8 +49,9 @@ var renderHeader = function() {
   li2.appendChild(anchor2);
   li3.appendChild(anchor3);
   ul.appendChild(li);
-  ul.appendChild(li2);
+  // swapped order of li3 and li2 to make "about us" last
   ul.appendChild(li3);
+  ul.appendChild(li2);
   header.appendChild(h1);
   header.appendChild(img);
   header.appendChild(ul);

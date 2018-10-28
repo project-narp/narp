@@ -1,4 +1,4 @@
-/* legend {
+legend {
 margin: 0 auto;
 font-size: 30px;
 color: brown;
@@ -10,7 +10,7 @@ height: 50%;
 padding: 15px;
 background: linear-gradient(lightcoral, lightgoldenrodyellow );
 /* background: lightgoldenrodyellow; */
-/* text-align: center;
+text-align: center;
 font-size: 22px;
 }
 
@@ -29,4 +29,4 @@ padding: 15px;
 
 label {
 color: yellow;    
-} */ */
+}
