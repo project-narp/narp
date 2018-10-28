@@ -103,5 +103,57 @@ export  $initHighlight;`,
     solution: 'test',
     solved: false,
     group: 0
-  }
+  },
+  {
+    title: 'if, else if, else',
+    explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
+    example: 
+    `var adoptSomeCats = function (){
+      var howManyToAdopt = Math.floor(Math.random() * 10);
+      return howManyToAdopt;
+    };
+    var howManyDidYouAdopt = adoptSomeCats();
+    
+    if (howManyDidYouAdopt > 5){
+      console.log(' you have adopted too many cats');
+    }
+    else if (howManyDidYouAdopt > 1) {
+      console.log('you have adopted the right amount of cats');
+    }
+    else {
+      console.log('please adopt more cats');
+    }`,
+    question: 'what will the console.log resolve to? ',
+    problem: `
+    var coffee = 'cold';
+    var drinkAndEnjoy = false;
+
+    var microwaveCoffee = function (){
+      coffee = 'hot';
+      drinkAndEnjoy = true;
+    };
+
+    var brewCoffee = function(){
+      coffee = 'hot';
+      drinkAndEnjoy = true;
+    };
+
+    if (coffee === 'hot'){
+      drinkAndEnjoy = true;
+    }
+
+    else if (coffee === 'cold'){
+    microwaveCoffee();
+    }
+
+    else {
+      brewCoffee();  
+    }
+
+    console.log(coffee, drinkAndEnjoy);
+    `,
+    solution: 'hot true',
+    solved: false,
+    group: 1,
+  },
 ];
