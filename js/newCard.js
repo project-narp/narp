@@ -41,7 +41,7 @@ var newCardHandler = function(event){
   allCards.push(card);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 
-  // navigate to concepts page
+  // navigate to concepts page after new card created
   window.location.href = 'sub.html';
 };
 
