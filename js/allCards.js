@@ -9,7 +9,8 @@ var allCards = [
     problem:
 '6 + 5 > 11 - 1',
     solution: 'true',
-    solved: false
+    solved: false,
+    group: 0
   },
   {
     title: 'Order of Operations',
@@ -21,7 +22,8 @@ var allCards = [
     problem:
 '1 + 1 == 2 && 10 * 10 > 50',
     solution: 'true',
-    solved: false
+    solved: false,
+    group: 0
   },
   {
     title: 'String concatenation',
@@ -33,7 +35,8 @@ var allCards = [
     problem: 
 '\'Russel\' + \' \' + \'Wilson\' + \' \' + \'is\' + \' \' + \'GOAT\'',
     solution: 'Russel Wilson is GOAT',
-    solved: false
+    solved: false,
+    group: 0
   },
   {
     title: 'Template Literals',
@@ -45,7 +48,8 @@ var allCards = [
     problem:
 '`a third of 99 is ${99 / 3}`',
     solution: 'a third of 99 is 33',
-    solved: false
+    solved: false,
+    group: 0
   },
   {
     title: 'Types',
@@ -57,7 +61,8 @@ var allCards = [
     problem: 
 'typeof [1,2,3]',
     solution: 'object',
-    solved: false
+    solved: false,
+    group: 0
   },
   {
     title: 'Test',
@@ -96,6 +101,7 @@ export  $initHighlight;`,
 
 export  $initHighlight;`,
     solution: 'test',
-    solved: false
+    solved: false,
+    group: 0
   }
 ];
