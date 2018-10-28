@@ -1,7 +1,7 @@
 'use strict';
 
 // ===============================================
-// CARDINDEX AND ALLCARDS LOCAL STORAGE
+// CARDINDEX AND ALLCARDS FROM LOCAL STORAGE
 // ===============================================
 var cardIndex;
 if (!localStorage.getItem('cardIndex')){
@@ -16,6 +16,7 @@ if (!localStorage.getItem('allCards')){
 } else {
   allCards = JSON.parse(localStorage.getItem('allCards'));
 }
+
 
 // ===============================================
 // RENDER CARD
@@ -95,3 +96,11 @@ var nextHandler = function(event) {
 };
 
 next.addEventListener('click', nextHandler);
+
+
+// ===============================================
+// MISC
+// ===============================================
+// prevent right clicking problem code
+var problem = document.getElementById('problem');
+problem.addEventListener('contextmenu', event => event.preventDefault());
