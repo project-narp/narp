@@ -2,8 +2,7 @@
 
 var cardForm = document.getElementById('cardForm');
 
-
-var Card = function(title, explanation, example, question, problem, solution){
+var Card = function(title, explanation, example, question, problem, solution, group){
   this.title = title;
   this.explanation = explanation;
   this.example = example;
@@ -11,6 +10,7 @@ var Card = function(title, explanation, example, question, problem, solution){
   this.problem = problem;
   this.solution = solution;
   this.solved = false;
+  this.group = group;
 };
 
 var newCardHandler = function(event){
@@ -29,8 +29,10 @@ var newCardHandler = function(event){
   console.log(cardProblem);
   var cardSolution = event.target.solution.value;
   console.log(cardSolution);
+  var cardGroup = event.target.group.value;
 
-  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution);
+  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
+
 
   // get allCards from localStorage and restore after updated
   if (!localStorage.getItem('allCards')){
