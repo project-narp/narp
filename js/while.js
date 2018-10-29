@@ -73,22 +73,79 @@
 //   eat();
 // }
 
-var timeRemaining = 20;
-var theresTimeLeft = true;
-var calender = 0;
-var seasons = ['Spring', 'Summer', 'Fall', 'Winter'];
-var reachedWinter = false;
 
-while (theresTimeLeft === true) {
-  if (timeRemaining <= 0){
-    theresTimeLeft = false;
-  }
+// this keeps crashing
+// var timeRemaining = 20;
+// var theresTimeLeft = true;
+// var calender = 0;
+// var seasons = ['Spring', 'Summer', 'Fall', 'Winter'];
+// var reachedWinter = false;
 
-  for (calender; calender <= seasons.length; calender++){
-    timeRemaining --;
-    console.log(timeRemaining);
-    if (calender === seasons.length){
-      calender = 0;
+// while (theresTimeLeft === true) {
+//   if (timeRemaining <= 0){
+//     theresTimeLeft = false;
+//   }
+
+//   for (calender; calender <= seasons.length; calender++){
+//     timeRemaining --;
+//     console.log(timeRemaining);
+//     if (calender === seasons.length){
+//       calender = 0;
+//     }
+//   }
+// }
+
+
+// works
+// var seasons = ['spring', 'summer', 'fall', 'winter'];
+// var seattleIsRaining = false;
+
+// for (var season = 0; season < seasons.length; season++){
+//   console.log(seasons[season]);
+//   if (seasons[season] !== 'summer'){
+//     seattleIsRaining = true;
+//     console.log(seattleIsRaining);
+//   }
+//   else if(seasons[season] === 'summer'){
+//     seattleIsRaining = false;
+//     console.log(seattleIsRaining);
+//   }
+// }
+
+
+var speed = 45;
+var speedlimit = 60;
+var distraction = false;
+var fun = false;
+
+var accelerate = function(){
+  speed++;
+  console.log(speed);
+};
+var brake = function(){
+  speed --;
+};
+while (speed < speedlimit && distraction === false){
+  accelerate();
+}
+while (speed > speedlimit && distraction === false){
+  brake();
+}
+var airDrummingToASongYouLove = function (){
+  fun = true;
+  distraction = true;
+};
+airDrummingToASongYouLove();
+var copWillPullYouOver = 65;
+while(distraction === true){
+  accelerate();
+  if (speed > copWillPullYouOver){
+    distraction = false;
+    while (speed > 0){
+      brake();
+      if (speed === 0){
+        console.log('you got pulled over and this cop looks like he\'s in a ticket writing mood!');
+      }
     }
   }
 }
@@ -98,9 +155,5 @@ while (theresTimeLeft === true) {
 
 
 
-// while(timeRemaining > 0){
-//   if(calender === seasons.length){
-//     console.log(seasons[calender]);
-//     calender = 0;
-//   }
-// }
+
+
