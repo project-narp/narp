@@ -8,10 +8,9 @@ main {
   background-color: #999;
 }
 
-main>h1 {
+h2 {
   font-size: 200%;
   margin-bottom: 20px;
-
 }
 
 p {
