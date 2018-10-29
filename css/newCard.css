@@ -65,24 +65,33 @@ input, textarea {
 
 input {
   width: 30%;
-  color: lightgreen;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 textarea {
   width: 80%;
   resize: vertical;
-  height: 100px;
 }
 
 .code {
   color: lightblue;
   font-family: 'Courier New', Courier, monospace;
+  height: 100px;
 }
 
 .prose {
   color: #ddd;
+}
+
+#title {
+  color: #ddd;
+  font-size: 125%;
+}
+
+#solution {
+  color: lightblue;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 select {
