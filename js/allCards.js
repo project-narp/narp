@@ -53,52 +53,25 @@ var allCards = [
     group: 0
   },
   {
-    title: 'Types',
-    explanation: '<code>typeof</code> is a unary operator which evaluates to a string of the type of value it precedes.',
-    example: 
-`typeof {a : "apple", b : "banana"}
-// → "object"`,
-    question: 'What does this evaluate to?',
-    problem: 
-'typeof [1,2,3]',
-    solution: 'object',
-    solved: false,
-    group: 0
-  },
-  {
-    title: 'Test',
-    explanation: 'Text explanation',
+    title: 'Conditionals',
+    explanation: '<code>if</code>, <code>else if</code>, and <code>else</code> are conditional keywords and affect the flow of the program depending on the outcome of the expressions which they evaluate.',
     example:
-`function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-            \` class="\${cls}"\`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
+`var adoptSomeCats = function (howManyToAdopt){
+  return howManyToAdopt;
+};
+var howManyDidYouAdopt = adoptSomeCats();
 
-export  $initHighlight;`,
-    question: 'Test question',
+if (howManyDidYouAdopt > 5) {
+  console.log(' you have adopted too many cats');
+} else if (howManyDidYouAdopt > 1) {
+  console.log('you have adopted the right amount of cats');
+} else {
+  console.log('please adopt more cats');
+}`,
+    question: 'What will the console.log resolve to? ',
     problem:
-`function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-            \` class="\${cls}"\`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
+`var coffee = 'cold';
+var drinkAndEnjoy = false;
 
 export  $initHighlight;`,
     solution: 'test',
