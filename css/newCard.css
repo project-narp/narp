@@ -88,4 +88,24 @@ textarea {
 select {
   background-color: #222;
   color: #eee;
+  width: 150px;
+  height: 25px;
+  border: black;
+  font-size: 80%;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #eee;
+  font-size: 80%;
+  border: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #333;
 }
