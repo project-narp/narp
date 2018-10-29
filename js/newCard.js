@@ -1,5 +1,6 @@
 'use strict';
 
+
 var cardForm = document.getElementById('cardForm');
 
 var Card = function(title, explanation, example, question, problem, solution, group){
@@ -29,7 +30,7 @@ var newCardHandler = function(event){
   console.log(cardProblem);
   var cardSolution = event.target.solution.value;
   console.log(cardSolution);
-  var cardGroup = event.target.group.value;
+  var cardGroup = event.option[event.selectedIndex].text;
 
   var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
 
