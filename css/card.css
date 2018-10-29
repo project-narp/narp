@@ -17,7 +17,7 @@ p {
   margin-bottom: 10px;
 }
 
-main>div {
+#container>div {
   width: 80%;
   margin: 0 auto 20px auto;
 }
@@ -59,7 +59,7 @@ input {
   font-size: 100%;
   font-family: 'Courier New', Courier, monospace;
   border: black;
-  text-align: center;
+  /* text-align: center; */
   width: 30%;
   display: block;
   margin: 10px auto 10px auto;
