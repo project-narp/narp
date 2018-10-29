@@ -84,3 +84,8 @@ textarea {
 .prose {
   color: #ddd;
 }
+
+select {
+  background-color: #222;
+  color: #eee;
+}

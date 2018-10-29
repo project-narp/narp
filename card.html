@@ -15,8 +15,12 @@
 </head>
 <body id="card">
   <script src="js/header.js"></script>
-  <main>
+  <div id="container">
     <h2 id="title"></h2>
+
+    <h4>
+      Topid Area: <span id="group"></span>
+    </h4>
 
     <div>
       <p id="explanation"></p>
@@ -34,6 +38,7 @@
 
     <div>
       <form id="form">
+        <label for="answer">Enter your solution:</label>
         <input name="answer" type="text">
         <button type="submit">Submit</button>
       </form>
@@ -47,7 +52,7 @@
       <h3>Wrong</h3>
       <p>Try again</p>
     </div>
-  </main>
+  </div>
 
   <script src="js/allCards.js"></script>
   <script src="js/card.js"></script>
