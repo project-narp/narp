@@ -1,3 +1,4 @@
+
 var allCards = [
   {
     title: 'Boolean',
@@ -156,4 +157,41 @@ export  $initHighlight;`,
     solved: false,
     group: 1,
   },
+  // {
+  //   title: 'While Loop',
+  //   explanation: 'A while loop will continue to perform an action so long as a given condition is met',
+  //   example: `var food = [
+  //     'boiled buns',
+  //     'goose flesh',
+  //     'orange peel pie',
+  //     'cobbled cream',
+  //     'horse sized snickers',
+  //     'buckets of brie',
+  //     'popping corn',
+  //     'mushed potatoes',
+  //     'milkshake buffet'
+  //   ];
+  //   var stomach = [];
+  //   var hungry = true;
+  //   var checkHunger = function(){
+  //     if(stomach.length >= 5){
+  //       hungry = false;
+  //     }
+  //   };
+  //   var eat = function (){
+  //     checkHunger();
+  //     var eating = food[Math.floor(Math.random() * food.length)];
+  //     var eaten = food.splice(eating, 1);
+  //     var digestion = stomach.push(eating);
+  //   };
+  //   while(hungry === true){
+  //     eat();
+  //   }`,
+  //   question: 
+    
+  // },
+
+
 ];
+
+

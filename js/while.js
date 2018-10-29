@@ -73,26 +73,34 @@
 //   eat();
 // }
 
-var timeRemaining = 10;
-var now;
+var timeRemaining = 20;
+var theresTimeLeft = true;
+var calender = 0;
 var seasons = ['Spring', 'Summer', 'Fall', 'Winter'];
 var reachedWinter = false;
-var passingOfTime = function(){
-  for (var time = 0; time < seasons.length; time ++){
-    now = seasons[time];
-    
-    while(timeRemaining >= 0){
-      console.log(timeRemaining);
-      if (time === seasons.length -1){
-        time = 0;
-        timeRemaining --;
-      }
+
+while (theresTimeLeft === true) {
+  if (timeRemaining <= 0){
+    theresTimeLeft = false;
+  }
+
+  for (calender; calender <= seasons.length; calender++){
+    timeRemaining --;
+    console.log(timeRemaining);
+    if (calender === seasons.length){
+      calender = 0;
     }
   }
-};
-passingOfTime();
+}
 
 
 
 
 
+
+// while(timeRemaining > 0){
+//   if(calender === seasons.length){
+//     console.log(seasons[calender]);
+//     calender = 0;
+//   }
+// }
