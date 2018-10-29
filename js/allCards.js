@@ -33,7 +33,7 @@ var allCards = [
 `'Se' + 'at' + 'tle' + ' ' + 'Sea' + 'ha' + 'wks'<br>
 // → "Seattle Seahawks"`,
     question: 'What does the following string concatenation evaluate to?',
-    problem: 
+    problem:
 '\'Russel\' + \' \' + \'Wilson\' + \' \' + \'is\' + \' \' + \'GOAT\'',
     solution: 'Russel Wilson is GOAT',
     solved: false,
@@ -53,25 +53,52 @@ var allCards = [
     group: 0
   },
   {
-    title: 'Conditionals',
-    explanation: '<code>if</code>, <code>else if</code>, and <code>else</code> are conditional keywords and affect the flow of the program depending on the outcome of the expressions which they evaluate.',
+    title: 'Types',
+    explanation: '<code>typeof</code> is a unary operator which evaluates to a string of the type of value it precedes.',
     example:
-`var adoptSomeCats = function (howManyToAdopt){
-  return howManyToAdopt;
-};
-var howManyDidYouAdopt = adoptSomeCats();
-
-if (howManyDidYouAdopt > 5) {
-  console.log(' you have adopted too many cats');
-} else if (howManyDidYouAdopt > 1) {
-  console.log('you have adopted the right amount of cats');
-} else {
-  console.log('please adopt more cats');
-}`,
-    question: 'What will the console.log resolve to? ',
+`typeof {a : "apple", b : "banana"}
+// → "object"`,
+    question: 'What does this evaluate to?',
     problem:
-`var coffee = 'cold';
-var drinkAndEnjoy = false;
+'typeof [1,2,3]',
+    solution: 'object',
+    solved: false,
+    group: 0
+  },
+  {
+    title: 'Test',
+    explanation: 'Text explanation',
+    example:
+`function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+            \` class="\${cls}"\`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;`,
+    question: 'Test question',
+    problem:
+`function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+            \` class="\${cls}"\`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
 
 export  $initHighlight;`,
     solution: 'test',
@@ -81,7 +108,7 @@ export  $initHighlight;`,
   {
     title: 'if, else if, else',
     explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
-    example: 
+    example:
 `var adoptSomeCats = function (){
   var howManyToAdopt = Math.floor(Math.random() * 10);
   return howManyToAdopt;
@@ -133,7 +160,7 @@ console.log(coffee, drinkAndEnjoy);
   {
     title: 'While Loop',
     explanation: 'A while loop will continue to perform an action so long as a given condition is met',
-    example: 
+    example:
   `var food = [
   'boiled buns',
   'goose flesh',
@@ -202,6 +229,59 @@ while(distraction === true){
     solved: false,
     group: 1,
   },
+  {
+    title: 'For Loop',
+    explanation: ' A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
+    example: `var lifespan = 80
+    living = false;
+    memories = [];
+    for (year = 0; year < lifespan; year ++){
+    living = true;  
+    memories.push(year);
+    }
+    living = false;
+    memories = [];
+    `,
+    question: 'Usain Bolt is fast. We already know that.  But he also loves the thrill of winning a race in a dramatic fashion, running just fast enough to beat you closely. Since i\'m slow, he\'s agreed to run a much further distance than me, to give me a chance... Usain has the following formula up in his head to help figure out how fast he should run. Answer with a boolean true or false... will Bolt inevitably win?',
+    problem: `
+var BoltWillWin = false;
+var howFastShouldUsainBoltRunToBeatMe = 1.1;
+var meRunningTime = function (){
+  var timeIveTakenRunning = 0;
+  var distanceToRun = 100;
+  for (distanceToRun; distanceToRun > 0; distanceToRun --){
+    timeIveTakenRunning ++;
+  }
+  console.log(timeIveTakenRunning, 'time i take');
+  return timeIveTakenRunning;
+};
+var usainBoltRunninTime = function (){
+  var timeHesTakenRunning = 0;
+  var distanceToRun = 160;
+  for (distanceToRun; distanceToRun >= 0; distanceToRun = distanceToRun - howFastShouldUsainBoltRunToBeatMe){
+    timeHesTakenRunning ++;
+  }
+  console.log(timeHesTakenRunning, 'time he takes');
+  return timeHesTakenRunning;
+};
+var BoltWantsToWinAndMakeItCLose = function (){
+  if (usainBoltRunninTime() > meRunningTime()){
+    howFastShouldUsainBoltRunToBeatMe = howFastShouldUsainBoltRunToBeatMe + .1;
+  }
+  else if (usainBoltRunninTime() < meRunningTime()){
+    BoltWillWin = true;
+  }
+  else {
+    console.log('tie!');
+  }
+};
+while (BoltWillWin === false){
+BoltWantsToWinAndMakeItCLose();
+console.log('Bolt wins!');
+}
+`,
+    solution: 'true',
+    solved: false,
+    group: 1
+  },
 ];
-
-
