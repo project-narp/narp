@@ -1,4 +1,4 @@
-main {
+#container {
   text-align: center;
   margin: 30px auto;
   width: 60%;
@@ -8,17 +8,16 @@ main {
   background-color: #999;
 }
 
-main>h1 {
+h2 {
   font-size: 200%;
   margin-bottom: 20px;
-
 }
 
 p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-main>div {
+#container>div {
   width: 80%;
   margin: 0 auto 20px auto;
 }
@@ -47,4 +46,37 @@ pre>code {
 h3 {
   font-size: 150%;
   margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 80%;
+  margin-bottom: 20px;
+}
+
+input {
+  background-color: #222;
+  color: lightblue;
+  font-size: 100%;
+  font-family: 'Courier New', Courier, monospace;
+  border: black;
+  /* text-align: center; */
+  width: 30%;
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: #222;
+  color: #eee;
+  font-size: 80%;
+  border: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #333;
 }

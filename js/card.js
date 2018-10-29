@@ -26,6 +26,10 @@ var renderCard = function() {
   var title = document.getElementById('title');
   title.textContent = card.title;
 
+  var groupTopics = ['Fundamentals', 'Control Flow', 'Functions', 'Data Structures'];
+  var group = document.getElementById('group');
+  group.innerHTML = groupTopics[card.group];
+
   var explanation = document.getElementById('explanation');
   explanation.innerHTML = card.explanation;
 

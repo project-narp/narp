@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Make a New Card</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
@@ -13,39 +13,57 @@
 </head>
 <body>
     <script src="js/header.js"></script>
-    <form id="cardForm">
-        <fieldset>
-            <legend> Make your new card</legend>
+    <div id="form-container">
+        <form id="cardForm">
+            <fieldset>
+                <div>
+                    <h2>Make Your New Card</h2>
+                </div>
+    
+                <div>
+                    <label for="title">Card Title</label>
+                    <input placeholder="Your title" type="text" name="title" required/>
+                </div>
 
-            <label for="title"> Card Title</label>
-            <input type="text" name="title" value="enter your card's title here"/>
-
-            <label for="explanation"> Explanation </label>
-            <textarea name="explanation" id="" cols="30" rows="10"></textarea>
-
-            <label for="example"> Example </label>
-            <textarea name="example" id="" cols="30" rows="10"></textarea>
-
-            <label for="question"> Question </label>
-            <textarea name="question" id="" cols="30" rows="10"></textarea>
-
-            <label for="problem"> Problem </label>
-            <textarea name="problem" id="" cols="30" rows="10"></textarea>
-
-            <label for="solution"> Solution </label>
-            <input type="text" name="solution"/>
-
-            <label for="group"> Group</label>
-            <select>
-                <option value="0">Fundamentals</option>
-                <option value="1">Control Flow</option>
-                <option value="2">Functions</option>
-                <option value="3">Data Structures</option>
-              </select>
-
-            <button type="submit">Submit Form</button>
-        </fieldset>
-    </form>  
+                <div>
+                    <label for="group">Subject Area</label>
+                    <select id="group">
+                        <option value="0">Fundamentals</option>
+                        <option value="1">Control Flow</option>
+                        <option value="2">Functions</option>
+                        <option value="3">Data Structures</option>
+                    </select>
+                </div>
+    
+                <div>
+                    <label for="explanation">Explanation </label>
+                    <textarea class="prose" name="explanation" required placeholder="Explain your topic here"></textarea>
+                </div>
+    
+                <div>
+                    <label for="example">Example </label>
+                    <textarea class="code" name="example" required placeholder="// your example code here"></textarea>
+                </div>
+    
+                <div>
+                    <label for="question">Question </label>
+                    <textarea class="prose" name="question" required placeholder="Put your question here"></textarea>
+                </div>
+    
+                <div>
+                    <label for="problem">Problem </label>
+                    <textarea class="code" name="problem" required placeholder="// your problem code here"></textarea>
+                </div>
+    
+                <div>
+                    <label for="solution">Solution </label>
+                    <input placeholder="Your solution" type="text" name="solution" required/>
+                </div>
+    
+                <button type="submit">Submit Form</button>
+            </fieldset>
+        </form>  
+    </div>
     
     <script src="js/allCards.js"></script>
     <script src="js/newCard.js"></script>
