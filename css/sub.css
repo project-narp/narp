@@ -1,5 +1,5 @@
 
-main li{
+/* main li{
     display: inline-block;
     width: 95px;
     height: 30px;
@@ -18,4 +18,34 @@ main button{
     padding: 10px;
     font-size: 25px;
     cursor: pointer;
+} */
+
+h2 {
+    text-align: center;
+}
+
+main>div {
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 6px;
+}
+
+.container>div {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    height: 100px;
+    cursor: pointer;
+    /* margin: 1px; */
 }
