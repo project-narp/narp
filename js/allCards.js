@@ -302,6 +302,35 @@ console.log('Bolt wins!');
     group: 3
   },
   {
+    //the opinions expresssed are ricks and ricks alone
+    title: 'Object Literal',
+    explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
+    example:`
+var = teacher{
+  isCorny: true,
+  knwldgeLvl: 9001,
+  favSaying: 'yeah',
+  gainsKnwldge: function(){
+    this.knwldgeLvl++;
+  },
+}`,
+    question: 'Consider the below block of code.  What will the console log at the end display?',
+    problem:`
+var student1 = {
+  favAnimal: 'cat',
+  favWeather: 'rain',
+};
+var student2 = {
+  favWeapon: 'bow',
+  favAnimal: 'ManBearPig',
+};
+console.log(student1.favWeather + student2.favWeapon);`,
+    solution: 'rainbow',
+    solved: false,
+    group: 3
+  },
+
+  {
     title: 'Fun with Functions',
     explanation: 'Functions declarations are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to, until it\'s called it waits patiently, doing nothing.',
     example: `
@@ -340,13 +369,3 @@ for (var i = 0; i < dominosLinedUp.length; i ++){
     group: 2,
   },
 ];
-
-//title
-//explanation
-// example
-// question
-// problem
-// solution
-// solved
-// group
-
