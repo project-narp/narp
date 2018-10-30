@@ -41,7 +41,7 @@ if (!localStorage.getItem('allCards')){
 // HANDLERS
 // ===========================================
 var cardHandler = function(event) {
-  localStorage.setItem('cardIndex', event.target.id);
+  localStorage.setItem('cardIndex', Number(event.target.id));
   window.location.href = 'card.html';
 };
 

@@ -3,9 +3,9 @@
 // ===============================================
 // CARDINDEX AND ALLCARDS FROM LOCAL STORAGE
 // ===============================================
-var cardIndex;
+
 if (!localStorage.getItem('cardIndex')){
-  cardIndex = 0;
+  var cardIndex = 0;
   localStorage.setItem('cardIndex', 0);
 } else {
   cardIndex = Number(localStorage.getItem('cardIndex'));
