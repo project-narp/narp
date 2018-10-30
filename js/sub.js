@@ -35,3 +35,6 @@ var clickHandFunc = function(event){
     window.location.href = 'card.html';}
 };
 subList2.addEventListener('click', clickHandFunc);
+
+
+
