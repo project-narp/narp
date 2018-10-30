@@ -8,13 +8,11 @@ var renderHeader = function() {
   h1.textContent = 'Project NARP';
 
   //creates div with img
-  // var div = document.createElement('div');
   var img = document.createElement('img');
   img.setAttribute('src', 'images/ninja.png');
   img.setAttribute('alt', 'ninja with swords');
 
   //creates navigation bar
-  // var div2 = document.createElement('div');
   var ul = document.createElement('ul');
   var li = document.createElement('li');
   var anchor = document.createElement('a');
@@ -33,18 +31,6 @@ var renderHeader = function() {
   anchor3.setAttribute('href', 'sub.html');
 
   //appends entire header
-  // document.body.appendChild(header);
-  // document.body.appendChild(h1);
-  // document.body.appendChild(div);
-  // document.body.appendChild(img);
-  // document.body.appendChild(div2);
-  // document.body.appendChild(ul);
-  // document.body.appendChild(li);
-  // li.appendChild(anchor);
-  // document.body.appendChild(li2);
-  // li2.appendChild(anchor2);
-  // document.body.appendChild(li3);
-  // li3.appendChild(anchor3);
   li.appendChild(anchor);
   li2.appendChild(anchor2);
   li3.appendChild(anchor3);

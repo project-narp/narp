@@ -56,6 +56,10 @@ main>div {
     font-size: 120%;
 }
 
+.solved {
+    text-decoration: line-through;
+}
+
 #plus {
     text-align: center;
     width: 50px;
@@ -64,5 +68,5 @@ main>div {
     font-weight: bold;
     /* border: 2px solid black; */
     box-sizing: border-box;
-    cursor: hover;
+    cursor: pointer;
 }

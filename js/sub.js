@@ -1,5 +1,5 @@
 'use strict';
-var subList2 = document.getElementById('main');
+// var subList2 = document.getElementById('main');
 // Andrews code to store to / retrieve from localStorage
 if (!localStorage.getItem('allCards')){
   localStorage.setItem('allCards', JSON.stringify(allCards));
@@ -38,13 +38,17 @@ if (!localStorage.getItem('allCards')){
 
 
 // ===========================================
-// HANDLE CLICK
+// HANDLERS
 // ===========================================
-var clickHandler = function(event) {
-  console.log(event.target);
+var cardHandler = function(event) {
   localStorage.setItem('cardIndex', event.target.id);
   window.location.href = 'card.html';
 };
+
+var newCardHandler = function(event) {
+  window.location.href = 'newCard.html';
+};
+document.getElementById('plus').addEventListener('click', newCardHandler);
 
 
 // ===========================================
@@ -62,14 +66,15 @@ var renderCards = function() {
     h3.textContent = card.title;
     div.appendChild(h3);
     div.id = i;
-    div.addEventListener('click', clickHandler);
+    div.addEventListener('click', cardHandler);
+    if (card.solved) div.setAttribute('class', 'solved');
     if (card.group === 0) {
       fundamentals.appendChild(div);
     } else if (card.group === 1) {
       controlFlow.appendChild(div);
     } else if (card.group === 2) {
       functions.appendChild(div);
-    } else {
+    } else if (card.group === 3 ){
       dataStructures.appendChild(div);
     }
   }
