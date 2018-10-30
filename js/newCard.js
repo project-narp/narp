@@ -43,7 +43,10 @@ var newCardHandler = function(event){
   } else {
     allCards = JSON.parse(localStorage.getItem('allCards'));
   }
+  // push the new card onto allCards then sort allCards on group key
+  // and restore into localStorage
   allCards.push(card);
+  allCards.sort((a,b) => a.group - b.group);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 
   // navigate to sub.html (not newCard.html anymore) after new card created

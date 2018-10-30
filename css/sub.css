@@ -50,10 +50,13 @@ main>div {
     height: 100px;
     cursor: pointer;
     padding: 40px 0 40px 0;
-    /* position: absolute; */
-    /* top: 50%; */
     box-sizing: border-box;
     font-size: 120%;
+}
+
+.container>div:hover {
+    background-color: #444;
+    color: #fff;
 }
 
 .solved {
@@ -66,7 +69,10 @@ main>div {
     height: 50px;
     font-size: 200%;
     font-weight: bold;
-    /* border: 2px solid black; */
     box-sizing: border-box;
     cursor: pointer;
+}
+
+#plus:hover {
+    background-color: #fff;
 }
