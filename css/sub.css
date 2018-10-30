@@ -1,5 +1,5 @@
 
-main li{
+/* main li{
     display: inline-block;
     width: 95px;
     height: 30px;
@@ -17,5 +17,56 @@ main button{
     border-radius: 50px;
     padding: 10px;
     font-size: 25px;
+    cursor: pointer;
+} */
+
+h2 {
+    text-align: center;
+    font-size: 150%;
+    margin-bottom: 15px;
+}
+
+main>div {
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto;
+    background-color: #eee;
+    padding: 5px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 6px;
+}
+
+.container>div {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    height: 100px;
+    cursor: pointer;
+    padding: 40px 0 40px 0;
+    /* position: absolute; */
+    /* top: 50%; */
+    box-sizing: border-box;
+    font-size: 120%;
+}
+
+.solved {
+    text-decoration: line-through;
+}
+
+#plus {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
+    font-weight: bold;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
     cursor: pointer;
 }
