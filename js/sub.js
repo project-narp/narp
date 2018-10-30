@@ -36,16 +36,33 @@ if (!localStorage.getItem('allCards')){
 // };
 // subList2.addEventListener('click', clickHandFunc);
 
+
+// ===========================================
+// HANDLE CLICK
+// ===========================================
+var clickHandler = function(event) {
+  console.log(event.target);
+  localStorage.setItem('cardIndex', event.target.id);
+  window.location.href = 'card.html';
+};
+
+
+// ===========================================
+// RENDER CARDS
+// ===========================================
 var renderCards = function() {
   var fundamentals = document.getElementById('fundamentals');
   var controlFlow = document.getElementById('control-flow');
   var functions = document.getElementById('functions');
   var dataStructures = document.getElementById('data-structures');
-  for (var card of allCards) {
+  for (var i in allCards) {
+    var card = allCards[i];
     var div = document.createElement('div');
-    var h3 = document.createElement('h2');
+    var h3 = document.createElement('h3');
     h3.textContent = card.title;
     div.appendChild(h3);
+    div.id = i;
+    div.addEventListener('click', clickHandler);
     if (card.group === 0) {
       fundamentals.appendChild(div);
     } else if (card.group === 1) {
@@ -59,3 +76,7 @@ var renderCards = function() {
 };
 
 renderCards();
+
+
+
+

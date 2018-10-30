@@ -22,6 +22,8 @@ main button{
 
 h2 {
     text-align: center;
+    font-size: 150%;
+    margin-bottom: 15px;
 }
 
 main>div {
@@ -47,5 +49,20 @@ main>div {
     text-align: center;
     height: 100px;
     cursor: pointer;
-    /* margin: 1px; */
+    padding: 40px 0 40px 0;
+    /* position: absolute; */
+    /* top: 50%; */
+    box-sizing: border-box;
+    font-size: 120%;
+}
+
+#plus {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 200%;
+    font-weight: bold;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    cursor: hover;
 }
