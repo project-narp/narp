@@ -302,31 +302,51 @@ console.log('Bolt wins!');
     group: 3
   },
   {
-    //the opinions expresssed are ricks and ricks alone
-    title: 'Object Literal',
-    explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
-    example:`
-var = teacher{
-  isCorny: true,
-  knwldgeLvl: 9001,
-  favSaying: 'yeah',
-  gainsKnwldge: function(){
-    this.knwldgeLvl++;
-  },
-}`,
-    question: 'Consider the below block of code.  What will the console log at the end display?',
-    problem:`
-var student1 = {
-  favAnimal: 'cat',
-  favWeather: 'rain',
+    title: 'Fun with Functions',
+    explanation: 'Functions declarations are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to, until it\'s called it waits patiently, doing nothing.',
+    example: `
+var tired, playful, hungry;
+var kittyCat = function (myArg){
+var behaviorsTired = ['cat nap', 'sleep for 18 hours', 'yawn and scratch', 'fall over', 'curl in a ball'];
+var behaviorsPlayful = ['catnip','run like primal beast','scratch and bite things that can hurt','find other cats and fight them', 'intimidate dogs 10 my size', 'walk across your keyboard and type nonsense','claw at your ear and rub your side', 'purr with intention and heart'];
+var behaviorsHungry = ['take a small break from napping to overeat','gorge myself', 'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 'bite at my human until it swats me away','meow angrily till my human gives in and feeds me more'];
+
+if (myArg === tired){
+return behaviorsTired[Math.floor(Math.random() * behaviorsTired.length)];
+}
+else if (myArg === playful){
+return behaviorsPlayful[Math.floor(Math.random() * behaviorsPlayful.length)];
+}
+else if (myArg === hungry){
+return behaviorsHungry[Math.floor(Math.random() * behaviorsHungry.length)];
+}
 };
-var student2 = {
-  favWeapon: 'bow',
-  favAnimal: 'ManBearPig',
+kittyCat(playful);
+// → (will return a random string from behaviorsPlayful)
+`,
+    question: "A 'true' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by 'flicking' the first one to start a chain reaction?",
+    problem: `
+var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
+var flick = function(){
+for (var i = 0; i < dominosLinedUp.length; i ++){
+  if (dominosLinedUp[i] === true){
+    dominosLinedUp[i] = false;
+    }
+  }
 };
-console.log(student1.favWeather + student2.favWeapon);`,
-    solution: 'rainbow',
+    `,
+    solution: 'flick()',
     solved: false,
-    group: 3
+    group: 2,
   },
 ];
+
+//title
+//explanation
+// example
+// question
+// problem
+// solution
+// solved
+// group
+
