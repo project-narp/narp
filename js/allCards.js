@@ -33,7 +33,7 @@ var allCards = [
 `'Se' + 'at' + 'tle' + ' ' + 'Sea' + 'ha' + 'wks'<br>
 // → "Seattle Seahawks"`,
     question: 'What does the following string concatenation evaluate to?',
-    problem: 
+    problem:
 '\'Russel\' + \' \' + \'Wilson\' + \' \' + \'is\' + \' \' + \'GOAT\'',
     solution: 'Russel Wilson is GOAT',
     solved: false,
@@ -53,25 +53,52 @@ var allCards = [
     group: 0
   },
   {
-    title: 'Conditionals',
-    explanation: '<code>if</code>, <code>else if</code>, and <code>else</code> are conditional keywords and affect the flow of the program depending on the outcome of the expressions which they evaluate.',
+    title: 'Types',
+    explanation: '<code>typeof</code> is a unary operator which evaluates to a string of the type of value it precedes.',
     example:
-`var adoptSomeCats = function (howManyToAdopt){
-  return howManyToAdopt;
-};
-var howManyDidYouAdopt = adoptSomeCats();
-
-if (howManyDidYouAdopt > 5) {
-  console.log(' you have adopted too many cats');
-} else if (howManyDidYouAdopt > 1) {
-  console.log('you have adopted the right amount of cats');
-} else {
-  console.log('please adopt more cats');
-}`,
-    question: 'What will the console.log resolve to? ',
+`typeof {a : "apple", b : "banana"}
+// → "object"`,
+    question: 'What does this evaluate to?',
     problem:
-`var coffee = 'cold';
-var drinkAndEnjoy = false;
+'typeof [1,2,3]',
+    solution: 'object',
+    solved: false,
+    group: 0
+  },
+  {
+    title: 'Test',
+    explanation: 'Text explanation',
+    example:
+`function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+            \` class="\${cls}"\`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
+
+export  $initHighlight;`,
+    question: 'Test question',
+    problem:
+`function $initHighlight(block, cls) {
+  try {
+    if (cls.search(/\bno\-highlight\b/) != -1)
+      return process(block, true, 0x0F) +
+            \` class="\${cls}"\`;
+  } catch (e) {
+    /* handle exception */
+  }
+  for (var i = 0 / 2; i < classes.length; i++) {
+    if (checkCondition(classes[i]) === undefined)
+      console.log('undefined');
+  }
+}
 
 export  $initHighlight;`,
     solution: 'test',
@@ -81,7 +108,7 @@ export  $initHighlight;`,
   {
     title: 'if, else if, else',
     explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
-    example: 
+    example:
 `var adoptSomeCats = function (){
   var howManyToAdopt = Math.floor(Math.random() * 10);
   return howManyToAdopt;
@@ -133,7 +160,7 @@ console.log(coffee, drinkAndEnjoy);
   {
     title: 'While Loop',
     explanation: 'A while loop will continue to perform an action so long as a given condition is met',
-    example: 
+    example:
   `var food = [
   'boiled buns',
   'goose flesh',
@@ -202,6 +229,143 @@ while(distraction === true){
     solved: false,
     group: 1,
   },
+  {
+    title: 'For Loop',
+    explanation: ' A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
+    example: `var lifespan = 80
+    living = false;
+    memories = [];
+    for (year = 0; year < lifespan; year ++){
+    living = true;  
+    memories.push(year);
+    }
+    living = false;
+    memories = [];
+    `,
+    question: 'Usain Bolt is fast. We already know that.  But he also loves the thrill of winning a race in a dramatic fashion, running just fast enough to beat you closely. Since i\'m slow, he\'s agreed to run a much further distance than me, to give me a chance... Usain has the following formula up in his head to help figure out how fast he should run. Answer with a boolean true or false... will Bolt inevitably win?',
+    problem: `
+var BoltWillWin = false;
+var howFastShouldUsainBoltRunToBeatMe = 1.1;
+var meRunningTime = function (){
+  var timeIveTakenRunning = 0;
+  var distanceToRun = 100;
+  for (distanceToRun; distanceToRun > 0; distanceToRun --){
+    timeIveTakenRunning ++;
+  }
+  console.log(timeIveTakenRunning, 'time i take');
+  return timeIveTakenRunning;
+};
+var usainBoltRunninTime = function (){
+  var timeHesTakenRunning = 0;
+  var distanceToRun = 160;
+  for (distanceToRun; distanceToRun >= 0; distanceToRun = distanceToRun - howFastShouldUsainBoltRunToBeatMe){
+    timeHesTakenRunning ++;
+  }
+  console.log(timeHesTakenRunning, 'time he takes');
+  return timeHesTakenRunning;
+};
+var BoltWantsToWinAndMakeItCLose = function (){
+  if (usainBoltRunninTime() > meRunningTime()){
+    howFastShouldUsainBoltRunToBeatMe = howFastShouldUsainBoltRunToBeatMe + .1;
+  }
+  else if (usainBoltRunninTime() < meRunningTime()){
+    BoltWillWin = true;
+  }
+  else {
+    console.log('tie!');
+  }
+};
+while (BoltWillWin === false){
+BoltWantsToWinAndMakeItCLose();
+console.log('Bolt wins!');
+}
+`,
+    solution: 'true',
+    solved: false,
+    group: 1
+  },
+  {
+    title: 'Array',
+    explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
+    example:
+  `var thisArray = [1,1,2,3,5,8];
+   thisArray[5] = 8;
+   //thisArray at index 5 gives you 8
+   thisArray.length(); = 6;
+   //thisArray is 6 indexes long but the last index is 5 because arrays always start at index 0
+  `,
+    question: 'What do the letters spell in the numbered indexes that are divisible by 3 of the below array?',
+    problem:
+  'var questionArray = [1,z,f,c,o,a,o,w,k,d,g,h,e]',
+    solution: 'code',
+    solved: false,
+    group: 3
+  },
+  {
+    //the opinions expresssed are ricks and ricks alone
+    title: 'Object Literal',
+    explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
+    example:`
+var = teacher{
+  isCorny: true,
+  knwldgeLvl: 9001,
+  favSaying: 'yeah',
+  gainsKnwldge: function(){
+    this.knwldgeLvl++;
+  },
+}`,
+    question: 'Consider the below block of code.  What will the console log at the end display?',
+    problem:`
+var student1 = {
+  favAnimal: 'cat',
+  favWeather: 'rain',
+};
+var student2 = {
+  favWeapon: 'bow',
+  favAnimal: 'ManBearPig',
+};
+console.log(student1.favWeather + student2.favWeapon);`,
+    solution: 'rainbow',
+    solved: false,
+    group: 3
+  },
+
+  {
+    title: 'Fun with Functions',
+    explanation: 'Functions declarations are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to, until it\'s called it waits patiently, doing nothing.',
+    example: `
+var tired, playful, hungry;
+var kittyCat = function (myArg){
+var behaviorsTired = ['cat nap', 'sleep for 18 hours', 'yawn and scratch', 'fall over', 'curl in a ball'];
+var behaviorsPlayful = ['catnip','run like primal beast','scratch and bite things that can hurt','find other cats and fight them', 'intimidate dogs 10 my size', 'walk across your keyboard and type nonsense','claw at your ear and rub your side', 'purr with intention and heart'];
+var behaviorsHungry = ['take a small break from napping to overeat','gorge myself', 'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 'bite at my human until it swats me away','meow angrily till my human gives in and feeds me more'];
+
+if (myArg === tired){
+return behaviorsTired[Math.floor(Math.random() * behaviorsTired.length)];
+}
+else if (myArg === playful){
+return behaviorsPlayful[Math.floor(Math.random() * behaviorsPlayful.length)];
+}
+else if (myArg === hungry){
+return behaviorsHungry[Math.floor(Math.random() * behaviorsHungry.length)];
+}
+};
+kittyCat(playful);
+// → (will return a random string from behaviorsPlayful)
+`,
+    question: "A 'true' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by 'flicking' the first one to start a chain reaction?",
+    problem: `
+var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
+var flick = function(){
+for (var i = 0; i < dominosLinedUp.length; i ++){
+  if (dominosLinedUp[i] === true){
+    dominosLinedUp[i] = false;
+    }
+  }
+};
+    `,
+    solution: 'flick()',
+    solved: false,
+    group: 2,
+  },
 ];
-
-

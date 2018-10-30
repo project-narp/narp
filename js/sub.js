@@ -56,7 +56,3 @@ var renderCards = function() {
 };
 
 renderCards();
-
-
-
-
