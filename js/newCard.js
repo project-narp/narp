@@ -31,7 +31,8 @@ var newCardHandler = function(event){
   var cardSolution = event.target.solution.value;
   console.log(cardSolution);
 
-  var cardGroup = document.getElementById('group').value;
+  var cardGroup = Number(document.getElementById('group').value);
+
 
   var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
 
@@ -45,10 +46,10 @@ var newCardHandler = function(event){
   allCards.push(card);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 
-  // navigate to new card page (not sub.html anymore) after new card created
-  // window.location.href = 'sub.html';
-  localStorage.setItem('cardIndex', allCards.length - 1);
-  window.location.href = 'card.html';
+  // navigate to sub.html (not newCard.html anymore) after new card created
+  window.location.href = 'sub.html';
+  // localStorage.setItem('cardIndex', allCards.length - 1);
+  // window.location.href = 'card.html';
 };
 
 cardForm.addEventListener('submit', newCardHandler);

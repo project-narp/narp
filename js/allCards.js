@@ -284,4 +284,49 @@ console.log('Bolt wins!');
     solved: false,
     group: 1
   },
+  {
+    title: 'Array',
+    explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
+    example:
+  `var thisArray = [1,1,2,3,5,8];
+   thisArray[5] = 8;
+   //thisArray at index 5 gives you 8
+   thisArray.length(); = 6;
+   //thisArray is 6 indexes long but the last index is 5 because arrays always start at index 0
+  `,
+    question: 'What do the letters spell in the numbered indexes that are divisible by 3 of the below array?',
+    problem:
+  'var questionArray = [1,z,f,c,o,a,o,w,k,d,g,h,e]',
+    solution: 'code',
+    solved: false,
+    group: 3
+  },
+  {
+    //the opinions expresssed are ricks and ricks alone
+    title: 'Object Literal',
+    explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
+    example:
+  `var = teacher{
+    isCorny: true,
+    knwldgeLvl: 9001,
+    favSaying: 'yeah',
+    gainsKnwldge: function(){
+      this.knwldgeLvl++;
+    },
+  }`,
+    question: 'Consider the below block of code.  What will the console log at the end display?',
+    problem:
+    `var student1 = {
+        favAnimal: 'cat',
+        favWeather: 'rain',
+    }
+    var student2 = {
+      favWeapon: 'bow',
+      favAnimal: 'ManBearPig',
+    }
+   console.log(student1.favWeather + student2.favWeapon);`,
+    solution: 'rainbow',
+    solved: false,
+    group: 3
+  },
 ];
