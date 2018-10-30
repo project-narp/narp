@@ -33,7 +33,7 @@ var allCards = [
 `'Se' + 'at' + 'tle' + ' ' + 'Sea' + 'ha' + 'wks'<br>
 // → "Seattle Seahawks"`,
     question: 'What does the following string concatenation evaluate to?',
-    problem: 
+    problem:
 '\'Russel\' + \' \' + \'Wilson\' + \' \' + \'is\' + \' \' + \'GOAT\'',
     solution: 'Russel Wilson is GOAT',
     solved: false,
@@ -53,35 +53,9 @@ var allCards = [
     group: 0
   },
   {
-    title: 'Conditionals',
-    explanation: '<code>if</code>, <code>else if</code>, and <code>else</code> are conditional keywords and affect the flow of the program depending on the outcome of the expressions which they evaluate.',
-    example:
-`var adoptSomeCats = function (howManyToAdopt){
-  return howManyToAdopt;
-};
-var howManyDidYouAdopt = adoptSomeCats();
-
-if (howManyDidYouAdopt > 5) {
-  console.log(' you have adopted too many cats');
-} else if (howManyDidYouAdopt > 1) {
-  console.log('you have adopted the right amount of cats');
-} else {
-  console.log('please adopt more cats');
-}`,
-    question: 'What will the console.log resolve to? ',
-    problem:
-`var coffee = 'cold';
-var drinkAndEnjoy = false;
-
-export  $initHighlight;`,
-    solution: 'test',
-    solved: false,
-    group: 0
-  },
-  {
     title: 'if, else if, else',
     explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
-    example: 
+    example:
 `var adoptSomeCats = function (){
   var howManyToAdopt = Math.floor(Math.random() * 10);
   return howManyToAdopt;
@@ -98,8 +72,8 @@ else {
   console.log('please adopt more cats');
 }`,
     question: 'what will the console.log resolve to? ',
-    problem: `
-var coffee = 'cold';
+    problem:
+`var coffee = 'cold';
 var drinkAndEnjoy = false;
 
 var microwaveCoffee = function (){
@@ -122,10 +96,8 @@ microwaveCoffee();
 
 else {
   brewCoffee();  
-}
+}`,
 
-console.log(coffee, drinkAndEnjoy);
-`,
     solution: 'hot true',
     solved: false,
     group: 1,
@@ -133,8 +105,8 @@ console.log(coffee, drinkAndEnjoy);
   {
     title: 'While Loop',
     explanation: 'A while loop will continue to perform an action so long as a given condition is met',
-    example: 
-  `var food = [
+    example: `
+  var food = [
   'boiled buns',
   'goose flesh',
   'orange peel pie',
@@ -202,6 +174,63 @@ while(distraction === true){
     solved: false,
     group: 1,
   },
+  {
+    title: 'functions',
+    explanation: 'a function is a code block that can defined in a given way and can be called, or executed, when desire',
+    example: `var spring = 'spring';
+    var summer = 'summer';
+    var fall = 'fall';
+    var winter = 'winter';
+    var seattle = function (weather){
+      console.log(weather);
+      if(weather === 'summer'){
+        return 'its dry, nice, and beautiful';
+      }
+      else if (weather !== 'summer') {
+        return 'its raining';}
+    };
+    
+    seattle('spring');`,
+    question: 'any string passed into the meditation() will result in the same advice, true or false',
+    problem: `
+    var meditation = function(anything){
+      if (anything){
+        console.log( ``objectively observe ${anything}, it is impermanent``);
+      }
+      else if (!anything){
+        console.log('obectively observe what is there to be observed, it is impermanent');
+      }
+    };
+    meditation(); 
+    `,
+    solution: true,
+    solved: false,
+    group: 2
+
+
 ];
 
+// var spring = 'spring';
+// var summer = 'summer';
+// var fall = 'fall';
+// var winter = 'winter';
+// var seattle = function (weather){
+//   console.log(weather);
+//   if(weather === 'summer'){
+//     return 'its dry, nice, and beautiful';
+//   }
+//   else if (weather !== 'summer') {
+//     return 'its raining';}
+// };
 
+// seattle('spring');
+
+// var meditation = function(anything){
+//   if (anything){
+//     console.log( `objectively observe ${anything}, it is impermanent`);
+//   }
+//   else if (!anything){
+//     console.log('obectively observe what is there to be observed, it is impermanent');
+//   }
+// };
+// meditation(); 
