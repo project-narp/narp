@@ -388,8 +388,8 @@ var fishColor = function(){
   {
     title: 'For Loop',
     explanation: 'A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
-    example: `
-var lifespan = 80
+    example: 
+`var lifespan = 80
 living = false;
 memories = [];
 for (year = 0; year < lifespan; year ++){
@@ -400,27 +400,26 @@ living = false;
 memories = [];
 `,
     question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 9?',
-    problem: `
-var fibby = function(fibLength){
+    problem: 
+`var fibby = function(fibLength){
   var oldMemory = 1;
   var newMemory = 1;
   var active;
-    if (fibLength === 1){
-      return 0;
-    }
-    else if (fibLength === 2 || fibLength === 3){
-      return 1;
-    }
-    for (var i = 2; i < fibLength; i ++){
-        active = oldMemory + newMemory;
-  
-      oldMemory = newMemory;
-      newMemory = active;
-      }
-      return active;
-    }
-  fibby(8);
-        `,
+  if (fibLength === 1){
+    return 0;
+  }
+  else if (fibLength === 2 || fibLength === 3){
+    return 1;
+  }
+  for (var i = 2; i < fibLength; i ++){
+    active = oldMemory + newMemory;
+
+    oldMemory = newMemory;
+    newMemory = active;
+  }
+  return active;
+};
+fibby(8);`,
     solution: '21',
     solved: false,
     group: 1,
