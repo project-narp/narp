@@ -40,7 +40,7 @@ pre>code {
   text-align: center;
 }
 
-#correct {
+#correct h3 {
   color: green;
 }
 
@@ -93,7 +93,7 @@ button:hover {
 }
 
 #container a:hover {
-  color: #444;
+  color: #555;
 }
 
 #delete {
@@ -103,4 +103,10 @@ button:hover {
 
 #delete:hover {
   color: red !important;
+}
+
+#reason a {
+  font-size: 100%;
+  color: #000;
+  text-decoration: underline;
 }

@@ -73,6 +73,11 @@ var formHandler = function(event) {
     document.getElementById('form').style.display = 'none';
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
+
+    // check for reason and display if exists
+    if (allCards[cardIndex].reason) {
+      document.getElementById('reason').innerHTML = allCards[cardIndex].reason;
+    }
   } else {
     document.getElementById('correct').style.display = 'none';
     document.getElementById('wrong').style.display = 'block';

@@ -364,11 +364,12 @@ fruits.sort();
 // → [ 'Apple', 'Banana', 'Mango', 'Orange' ]`,
     question: 'What does the following code log to the console?',
     problem:
-`var arr = [1, -7, 0, -2, 5];
+`var arr = [10, -7, 0, -2, 5];
 console.log(arr.sort()[0]);`,
     solution: '-2',
     solved: false,
-    group: 3
+    group: 3,
+    reason: 'Since the sort method sorts numbers lexicographically, -2 comes before -7. The sorted array from above is <code>[ -2, -7, 0, 10, 5 ]</code>. The solution is to pass a comparison function into the sort method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Further Reading</a>'
   },
   {
     title: 'Ternary Conditional',
