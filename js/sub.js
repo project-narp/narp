@@ -54,6 +54,20 @@ document.getElementById('reset').addEventListener('click', event => {
   location.reload();
 });
 
+// add bloopers to allCards
+document.getElementById('bloopers').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (!localStorage.getItem('bloopersAdded')) {
+    blooperReel.forEach(card => card.title += ' (Blooper)');
+    allCards = allCards.concat(blooperReel);
+    localStorage.setItem('allCards', JSON.stringify(allCards));
+    localStorage.setItem('bloopersAdded', true);
+    location.reload();
+  }
+});
+
 
 // ===========================================
 // RENDER CARDS
