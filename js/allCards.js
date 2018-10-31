@@ -118,79 +118,6 @@ console.log(coffee, drinkAndEnjoy);
     group: 1,
   },
   {
-    title: 'While Loop',
-    explanation: 'A while loop will continue to perform an action so long as a given condition is met',
-    example:
-  `var food = [
-  'boiled buns',
-  'goose flesh',
-  'orange peel pie',
-  'cobbled cream',
-  'horse sized snickers',
-  'buckets of brie',
-  'popping corn',
-  'mushed potatoes',
-  'milkshake buffet'
-];
-var stomach = [];
-var hungry = true;
-var checkHunger = function(){
-  if(stomach.length >= 5){
-    hungry = false;
-  }
-};
-var eat = function (){
-  checkHunger();
-  var eating = food[Math.floor(Math.random() * food.length)];
-  var eaten = food.splice(eating, 1);
-  var digestion = stomach.push(eating);
-};
-while(hungry === true){
-  eat();
-}`,
-    question: 'What sequence of events takes place? Enter a boolean true or false on whether you get pulled over or not',
-    problem: `
-var speed = 45;
-var speedlimit = 60;
-var distraction = false;
-var fun = false;
-
-var accelerate = function(){
-  speed++;
-};
-var brake = function(){
-  speed --;
-};
-while (speed < speedlimit && distraction === false){
-  accelerate();
-}
-while (speed > speedlimit && distraction === false){
-  brake();
-}
-var airDrummingToASongYouLove = function (){
-  fun = true;
-  distraction = true;
-};
-airDrummingToASongYouLove();
-var copWillPullYouOver = 65;
-while(distraction === true){
-  accelerate();
-  if (speed > copWillPullYouOver){
-    distraction = false;
-    while (speed > 0){
-      brake();
-      if (speed === 0){
-        console.log('you got pulled over and this cop looks like he is in a ticket writing mood!');
-      }
-    }
-  }
-}`,
-    solution: 'true',
-    solved: false,
-    group: 1,
-  },
-  
-  {
     title: 'Array',
     explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
     example:
@@ -388,42 +315,90 @@ var fishColor = function(){
   {
     title: 'For Loop',
     explanation: 'A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
-    example: `var lifespan = 80
-    living = false;
-    memories = [];
-    for (year = 0; year < lifespan; year ++){
-    living = true;  
-    memories.push(year);
-    }
-    living = false;
-    memories = [];
-    `,
+    example: `
+var lifespan = 80
+living = false;
+memories = [];
+for (year = 0; year < lifespan; year ++){
+living = true;  
+memories.push(year);
+}
+living = false;
+memories = [];
+`,
     question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 9?',
     problem: `
-    var fibby = function(fibLength){
-      var oldMemory = 1;
-      var newMemory = 1;
-      var active;
-        if (fibLength === 1){
-          return 0;
-        }
-        else if (fibLength === 2 || fibLength === 3){
-          return 1;
-        }
-        for (var i = 3; i < fibLength; i ++){
-           active = oldMemory + newMemory;
-      
-          oldMemory = newMemory;
-          newMemory = active;
-          }
-          return active;
-        }
-      fibby(9);
+var fibby = function(fibLength){
+  var oldMemory = 1;
+  var newMemory = 1;
+  var active;
+    if (fibLength === 1){
+      return 0;
+    }
+    else if (fibLength === 2 || fibLength === 3){
+      return 1;
+    }
+    for (var i = 3; i < fibLength; i ++){
+        active = oldMemory + newMemory;
+  
+      oldMemory = newMemory;
+      newMemory = active;
+      }
+      return active;
+    }
+  fibby(9);
     `,
     solution: '21',
     solved: false,
     group: 1,
     reason: 'the Fibonacci sequence"s first three iterations are 0,1,1. We hard coded those, and that"s why our for loop iterator begins at 3.  newMemory is current and oldMemory is 1 iteration older than it. Active adds both memories, oldMemory becomes newMemory and newMemory becomes active. In this the memories are constantly updating themselves, and active is growing the sum larger and larger.',
+  },
+  {
+    title: 'While Loop',
+    explanation: 'A while loop will continue to perform an action so long as a given condition is met',
+    example:
+  `var food = [
+  'boiled buns',
+  'goose flesh',
+  'orange peel pie',
+  'cobbled cream',
+  'horse sized snickers',
+  'buckets of brie',
+  'popping corn',
+  'mushed potatoes',
+  'milkshake buffet'
+];
+var stomach = [];
+var hungry = true;
+var checkHunger = function(){
+  if(stomach.length >= 5){
+    hungry = false;
+  }
+};
+var eat = function (){
+  checkHunger();
+  var eating = food[Math.floor(Math.random() * food.length)];
+  var eaten = food.splice(eating, 1);
+  var digestion = stomach.push(eating);
+};
+while(hungry === true){
+eat();
+}`,
+    question: 'You\'re drowning at a depth of -50, how will you survive?',
+    problem: `
+var underwater = function(depth){
+  var swimming = true;
+  while (swimming){
+    depth ++;
+    if (depth >= 0){
+      swimming = false;
+    }
+  }
+  console.log('hurray you didn\'t drown!');
+};`,
+    solution: 'underwater(-50);',
+    solved: false,
+    group: 1,
   },
 ];
 
