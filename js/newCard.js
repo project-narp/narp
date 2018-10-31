@@ -51,3 +51,32 @@ var newCardHandler = function(event){
 };
 
 cardForm.addEventListener('submit', newCardHandler);
+
+
+// prevent tabbing in code textareas (unsure if keeping)
+function enableTab(cl) {
+  var els = document.getElementsByClassName(cl);
+  console.log(els);
+  Array.prototype.forEach.call(els, el => {
+    el.onkeydown = function(e) {
+      if (e.keyCode === 9) { // tab was pressed
+
+        // get caret position/selection
+        var val = this.value,
+          start = this.selectionStart,
+          end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = val.substring(0, start) + '\t' + val.substring(end);
+
+        // put caret at right position again
+        this.selectionStart = this.selectionEnd = start + 1;
+
+        // prevent the focus lose
+        return false;
+
+      }
+    };
+  });
+}
+// enableTab('code');
