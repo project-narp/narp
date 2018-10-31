@@ -1,5 +1,5 @@
 'use strict';
-// var subList2 = document.getElementById('main');
+
 // Andrews code to store to / retrieve from localStorage
 if (!localStorage.getItem('allCards')){
   allCards.sort((a, b) => a.group - b.group);
@@ -25,6 +25,24 @@ var newCardHandler = function(event) {
   window.location.href = 'newCard.html';
 };
 document.getElementById('plus').addEventListener('click', newCardHandler);
+
+// more options event
+document.getElementById('options').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  document.getElementById('options').style.display = 'none';
+  document.getElementById('reset').style.display = 'block';
+});
+
+// reset all cards event
+document.getElementById('reset').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  localStorage.clear();
+  location.reload();
+});
 
 
 // ===========================================

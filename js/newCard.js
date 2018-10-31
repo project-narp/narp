@@ -3,7 +3,7 @@
 
 var cardForm = document.getElementById('cardForm');
 
-var Card = function(title, explanation, example, question, problem, solution, group){
+var Card = function(title, explanation, example, question, problem, solution, group, reason){
   this.title = title;
   this.explanation = explanation;
   this.example = example;
@@ -12,6 +12,7 @@ var Card = function(title, explanation, example, question, problem, solution, gr
   this.solution = solution;
   this.solved = false;
   this.group = group;
+  if (reason) this.reason = reason;
 };
 
 var newCardHandler = function(event){
@@ -19,22 +20,16 @@ var newCardHandler = function(event){
   event.stopPropagation();
 
   var cardTitle = event.target.title.value;
-  console.log(cardTitle);
   var cardExplanation = event.target.explanation.value;
-  console.log(cardExplanation);
   var cardExample = event.target.example.value;
-  console.log(cardExample);
   var cardQuestion = event.target.question.value;
-  console.log(cardQuestion);
   var cardProblem = event.target.problem.value;
-  console.log(cardProblem);
   var cardSolution = event.target.solution.value;
-  console.log(cardSolution);
-
   var cardGroup = Number(document.getElementById('group').value);
+  var cardReason = event.target.reason.value;
 
 
-  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
+  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup, cardReason);
 
 
   // get allCards from localStorage and restore after updated
@@ -56,3 +51,32 @@ var newCardHandler = function(event){
 };
 
 cardForm.addEventListener('submit', newCardHandler);
+
+
+// prevent tabbing in code textareas (unsure if keeping)
+function enableTab(cl) {
+  var els = document.getElementsByClassName(cl);
+  console.log(els);
+  Array.prototype.forEach.call(els, el => {
+    el.onkeydown = function(e) {
+      if (e.keyCode === 9) { // tab was pressed
+
+        // get caret position/selection
+        var val = this.value,
+          start = this.selectionStart,
+          end = this.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        this.value = val.substring(0, start) + '\t' + val.substring(end);
+
+        // put caret at right position again
+        this.selectionStart = this.selectionEnd = start + 1;
+
+        // prevent the focus lose
+        return false;
+
+      }
+    };
+  });
+}
+// enableTab('code');

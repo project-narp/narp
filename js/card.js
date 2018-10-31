@@ -70,8 +70,14 @@ var formHandler = function(event) {
     allCards[cardIndex].solved = true;
     localStorage.setItem('allCards', JSON.stringify(allCards));
 
+    document.getElementById('form').style.display = 'none';
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
+
+    // check for reason and display if exists
+    if (allCards[cardIndex].reason) {
+      document.getElementById('reason').innerHTML = allCards[cardIndex].reason;
+    }
   } else {
     document.getElementById('correct').style.display = 'none';
     document.getElementById('wrong').style.display = 'block';
@@ -109,3 +115,23 @@ next.addEventListener('click', nextHandler);
 // prevent right clicking problem code
 var problem = document.getElementById('problem');
 problem.addEventListener('contextmenu', event => event.preventDefault());
+
+// more options event
+document.getElementById('options').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  document.getElementById('options').style.display = 'none';
+  document.getElementById('delete').style.display = 'inline';
+});
+
+// delete event
+document.getElementById('delete').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  allCards = allCards.slice(0, cardIndex).concat(allCards.slice(cardIndex + 1));
+  localStorage.setItem('allCards', JSON.stringify(allCards));
+
+  window.location.href = 'sub.html';
+});
