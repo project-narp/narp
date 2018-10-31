@@ -385,7 +385,6 @@ var fishColor = function(){
     solved: false,
     group: 2,
   },
-
   {
     title: 'For Loop',
     explanation: 'A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
@@ -421,9 +420,10 @@ var fishColor = function(){
         }
       fibby(9);
     `,
-    solution: 21,
+    solution: '21',
     solved: false,
     group: 1,
+    reason: 'the Fibonacci sequence"s first three iterations are 0,1,1. We hard coded those, and that"s why our for loop iterator begins at 3.  newMemory is current and oldMemory is 1 iteration older than it. Active adds both memories, oldMemory becomes newMemory and newMemory becomes active. In this the memories are constantly updating themselves, and active is growing the sum larger and larger.',
   },
 ];
 
