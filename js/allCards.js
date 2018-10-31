@@ -410,5 +410,43 @@ factorial(6);`,
     solution: '720',
     solved: false,
     group: 2
+  },
+    title: 'Function Declaration and Expression',
+    explanation: 'besides from the syntax differences, the biggest difference between these two types of functions is that function declarations can be called above or below where it is defined, whereas function expressions behave like other variables and can only be called below the definition',
+    example: `
+var x = function(){
+  console.log('x');  
   }
+function y(){
+  console.log('y');
+  }
+  x();
+  y();
+    `,
+    question: 'will the following code run or result in an error, enter true if it will run, enter false if it will break',
+    problem: `
+fishNum();
+fishColor();
+function fishNum() {
+  console.log('One fish, two fish');
+}
+var fishColor = function(){
+  console.log('Red fish, blue fish');
+};
+`,
+    solution: 'false',
+    solved: false,
+    group: 2,
+  },
 ];
+
+
+
+//title
+//explanation
+// example
+// question
+// problem
+// solution
+// solved
+// group
