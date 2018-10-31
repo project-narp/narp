@@ -30,7 +30,7 @@ var allCards = [
     title: 'String concatenation',
     explanation: 'Strings can be concatenated by adding them together with the + operator.',
     example:
-`'Se' + 'at' + 'tle' + ' ' + 'Sea' + 'ha' + 'wks'<br>
+`'Se' + 'at' + 'tle' + ' ' + 'Sea' + 'ha' + 'wks'
 // → "Seattle Seahawks"`,
     question: 'What does the following string concatenation evaluate to?',
     problem:
@@ -43,7 +43,7 @@ var allCards = [
     title: 'Template Literals',
     explanation: 'String literals use backticks (`) and allow you to pass in an expression to be evaluated inside the string. They also allow for multi line strings.',
     example:
-`\`3 * 7 is \${3 * 7}\`<br>
+`\`3 * 7 is \${3 * 7}\`
 // → "3 * 7 is 21"`,
     question: 'What does the whole line evaluate to?',
     problem:
@@ -185,7 +185,7 @@ while(distraction === true){
     }
   }
 }`,
-    solution: true,
+    solution: 'true',
     solved: false,
     group: 1,
   },
@@ -267,7 +267,7 @@ console.log('Bolt wins!');
     explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
     example:`
 var = teacher{
-  isCorny: true,
+  isChill: true,
   knwldgeLvl: 9001,
   favSaying: 'yeah',
   gainsKnwldge: function(){
@@ -372,7 +372,7 @@ console.log(arr.sort()[0]);`,
   },
   {
     title: 'Ternary Conditional',
-    explanation: '',
+    explanation: 'This one is called the conditional operator (or sometimes just the ternary operator since it is the only such operator in the language). The value on the left of the question mark “picks” which of the other two values will come out. When it is true, it chooses the middle value, and when it is false, it chooses the value on the right.',
     example:
 `console.log(true ? 1 : 2);
 // → 1
