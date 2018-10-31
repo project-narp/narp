@@ -3,7 +3,7 @@
 
 var cardForm = document.getElementById('cardForm');
 
-var Card = function(title, explanation, example, question, problem, solution, group){
+var Card = function(title, explanation, example, question, problem, solution, group, reason){
   this.title = title;
   this.explanation = explanation;
   this.example = example;
@@ -12,6 +12,7 @@ var Card = function(title, explanation, example, question, problem, solution, gr
   this.solution = solution;
   this.solved = false;
   this.group = group;
+  if (reason) this.reason = reason;
 };
 
 var newCardHandler = function(event){
@@ -19,22 +20,16 @@ var newCardHandler = function(event){
   event.stopPropagation();
 
   var cardTitle = event.target.title.value;
-  console.log(cardTitle);
   var cardExplanation = event.target.explanation.value;
-  console.log(cardExplanation);
   var cardExample = event.target.example.value;
-  console.log(cardExample);
   var cardQuestion = event.target.question.value;
-  console.log(cardQuestion);
   var cardProblem = event.target.problem.value;
-  console.log(cardProblem);
   var cardSolution = event.target.solution.value;
-  console.log(cardSolution);
-
   var cardGroup = Number(document.getElementById('group').value);
+  var cardReason = event.target.reason.value;
 
 
-  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup);
+  var card = new Card(cardTitle, cardExplanation, cardExample, cardQuestion, cardProblem, cardSolution, cardGroup, cardReason);
 
 
   // get allCards from localStorage and restore after updated
