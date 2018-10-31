@@ -70,6 +70,7 @@ var formHandler = function(event) {
     allCards[cardIndex].solved = true;
     localStorage.setItem('allCards', JSON.stringify(allCards));
 
+    document.getElementById('form').style.display = 'none';
     document.getElementById('wrong').style.display = 'none';
     document.getElementById('correct').style.display = 'block';
   } else {
