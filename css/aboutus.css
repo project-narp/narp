@@ -6,6 +6,10 @@ html {
 figure {
   float: left;
   width: 60%;
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding: 10px 12px; 
 }
 figcaption {
   float: left;
@@ -16,5 +20,11 @@ img {
   width: 300px;
   padding: 14px 18px;
   margin-top: 5%;
+  margin: 0px auto; 
 }
-
+main {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20%;
+ }
