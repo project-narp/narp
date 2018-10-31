@@ -189,61 +189,7 @@ while(distraction === true){
     solved: false,
     group: 1,
   },
-  {
-    title: 'For Loop',
-    explanation: ' A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
-    example: `var lifespan = 80
-    living = false;
-    memories = [];
-    for (year = 0; year < lifespan; year ++){
-    living = true;  
-    memories.push(year);
-    }
-    living = false;
-    memories = [];
-    `,
-    question: 'Usain Bolt is fast. We already know that.  But he also loves the thrill of winning a race in a dramatic fashion, running just fast enough to beat you closely. Since i\'m slow, he\'s agreed to run a much further distance than me, to give me a chance... Usain has the following formula up in his head to help figure out how fast he should run. Answer with a boolean true or false... will Bolt inevitably win?',
-    problem: `
-var BoltWillWin = false;
-var howFastShouldUsainBoltRunToBeatMe = 1.1;
-var meRunningTime = function (){
-  var timeIveTakenRunning = 0;
-  var distanceToRun = 100;
-  for (distanceToRun; distanceToRun > 0; distanceToRun --){
-    timeIveTakenRunning ++;
-  }
-  console.log(timeIveTakenRunning, 'time i take');
-  return timeIveTakenRunning;
-};
-var usainBoltRunninTime = function (){
-  var timeHesTakenRunning = 0;
-  var distanceToRun = 160;
-  for (distanceToRun; distanceToRun >= 0; distanceToRun = distanceToRun - howFastShouldUsainBoltRunToBeatMe){
-    timeHesTakenRunning ++;
-  }
-  console.log(timeHesTakenRunning, 'time he takes');
-  return timeHesTakenRunning;
-};
-var BoltWantsToWinAndMakeItCLose = function (){
-  if (usainBoltRunninTime() > meRunningTime()){
-    howFastShouldUsainBoltRunToBeatMe = howFastShouldUsainBoltRunToBeatMe + .1;
-  }
-  else if (usainBoltRunninTime() < meRunningTime()){
-    BoltWillWin = true;
-  }
-  else {
-    console.log('tie!');
-  }
-};
-while (BoltWillWin === false){
-BoltWantsToWinAndMakeItCLose();
-console.log('Bolt wins!');
-}
-`,
-    solution: 'true',
-    solved: false,
-    group: 1
-  },
+  
   {
     title: 'Array',
     explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
@@ -439,7 +385,49 @@ var fishColor = function(){
     solved: false,
     group: 2,
   },
+
+  {
+    title: 'For Loop',
+    explanation: 'A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
+    example: `var lifespan = 80
+    living = false;
+    memories = [];
+    for (year = 0; year < lifespan; year ++){
+    living = true;  
+    memories.push(year);
+    }
+    living = false;
+    memories = [];
+    `,
+    question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 9?',
+    problem: `
+    var fibby = function(fibLength){
+      var oldMemory = 1;
+      var newMemory = 1;
+      var active;
+        if (fibLength === 1){
+          return 0;
+        }
+        else if (fibLength === 2 || fibLength === 3){
+          return 1;
+        }
+        for (var i = 3; i < fibLength; i ++){
+           active = oldMemory + newMemory;
+      
+          oldMemory = newMemory;
+          newMemory = active;
+          }
+          return active;
+        }
+      fibby(9);
+    `,
+    solution: 21,
+    solved: false,
+    group: 1,
+  },
 ];
+
+
 
 
 
