@@ -60,9 +60,11 @@ main a {
     text-align: center;
     text-decoration: none;
     color: #ddd;
-    margin-bottom: 20px;
     font-size: 80%;
-    width: 100px;
+    margin-bottom: 10px;
+}
+
+main section {
     margin: 20px auto 20px auto;
 }
 
@@ -70,11 +72,11 @@ main a:hover {
     color: #fff;
 }
 
-#reset {
+#options {
     display: none;
     color: black;
 }
 
-#reset:hover {
+#options:hover {
     color: #fff;
 }

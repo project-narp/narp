@@ -10,7 +10,7 @@ if (!localStorage.getItem('allCards')){
 
 
 // ===========================================
-// HANDLERS
+// EVENTS & HANDLERS
 // ===========================================
 var cardHandler = function(event) {
   // check for id, if not one get it from parent element
@@ -27,21 +27,45 @@ var newCardHandler = function(event) {
 document.getElementById('plus').addEventListener('click', newCardHandler);
 
 // more options event
-document.getElementById('options').addEventListener('click', event => {
+document.getElementById('more').addEventListener('click', event => {
   event.preventDefault();
   event.stopPropagation();
 
-  document.getElementById('options').style.display = 'none';
-  document.getElementById('reset').style.display = 'block';
+  document.getElementById('more').style.display = 'none';
+  document.getElementById('options').style.display = 'block';
 });
 
-// reset all cards event
+// reset all progress (get rid of line-throughs)
+document.getElementById('progress').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  allCards.forEach(card => card.solved = false);
+  localStorage.setItem('allCards', JSON.stringify(allCards));
+  location.reload();
+});
+
+// reset all cards to originals event
 document.getElementById('reset').addEventListener('click', event => {
   event.preventDefault();
   event.stopPropagation();
 
   localStorage.clear();
   location.reload();
+});
+
+// add bloopers to allCards
+document.getElementById('bloopers').addEventListener('click', event => {
+  event.preventDefault();
+  event.stopPropagation();
+
+  if (!localStorage.getItem('bloopersAdded')) {
+    blooperReel.forEach(card => card.title += ' (Blooper)');
+    allCards = allCards.concat(blooperReel);
+    localStorage.setItem('allCards', JSON.stringify(allCards));
+    localStorage.setItem('bloopersAdded', true);
+    location.reload();
+  }
 });
 
 
