@@ -185,7 +185,7 @@ while(distraction === true){
     }
   }
 }`,
-    solution: true,
+    solution: 'true',
     solved: false,
     group: 1,
   },
@@ -437,21 +437,6 @@ var fishColor = function(){
     solution: 'false',
     solved: false,
     group: 2,
-  },
-  {
-    title: 'Camel Case',
-    explanation: 'Camel case is the practice of eliminatting spaces from sentences and capitalizing the first letter of each word after the first. This is most commonly used to make long variable names.',
-    example: `
-  // to write a variable named "My school rocks!" you would need to write it
-  var = mySchoolRocks!; 
-    `,
-    question: 'Write the following sentence in camel case.',
-    problem: `
-    I can code
-  `,
-    solution: 'iCanCode',
-    solved: false,
-    group: 0,
   },
 ];
 
