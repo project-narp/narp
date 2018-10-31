@@ -66,47 +66,7 @@ var allCards = [
     group: 0
   },
   {
-    title: 'Test',
-    explanation: 'Text explanation',
-    example:
-`function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-            \` class="\${cls}"\`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
-
-export  $initHighlight;`,
-    question: 'Test question',
-    problem:
-`function $initHighlight(block, cls) {
-  try {
-    if (cls.search(/\bno\-highlight\b/) != -1)
-      return process(block, true, 0x0F) +
-            \` class="\${cls}"\`;
-  } catch (e) {
-    /* handle exception */
-  }
-  for (var i = 0 / 2; i < classes.length; i++) {
-    if (checkCondition(classes[i]) === undefined)
-      console.log('undefined');
-  }
-}
-
-export  $initHighlight;`,
-    solution: 'test',
-    solved: false,
-    group: 0
-  },
-  {
-    title: 'if, else if, else',
+    title: 'Conditional Statements',
     explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
     example:
 `var adoptSomeCats = function (){
@@ -353,7 +313,7 @@ return behaviorsHungry[Math.floor(Math.random() * behaviorsHungry.length)];
 kittyCat(playful);
 // → (will return a random string from behaviorsPlayful)
 `,
-    question: "A 'true' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by 'flicking' the first one to start a chain reaction?",
+    question: 'A \'true\' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by \'flicking\' the first one to start a chain reaction?',
     problem: `
 var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
 var flick = function(){
@@ -368,4 +328,87 @@ for (var i = 0; i < dominosLinedUp.length; i ++){
     solved: false,
     group: 2,
   },
+  {
+    title: 'Let',
+    explanation: 'The <code>let</code> keyword is similar to <code>var</code> in that it signifies the start of a variable binding. The <code>let</code> binding is scoped to the statement block it is declared in, including if/else blocks and loop blocks, whereas the <code>var</code> binding is scoped to the function it is declared in.',
+    example:
+`let x = 1;
+if (true) {
+  let y = 2;
+  var z = 3;
+  console.log(x + y + z);
+  // → 6
+}
+// y is not visible here
+console.log(x + z);
+// → 4`,
+    question: 'What does the code below log to the console?',
+    problem:
+`var a = 2;
+let b = 3;
+if (true) {
+  var a = 5;
+  let b = 7;
+}
+console.log(a * b);`,
+    solution: '15',
+    solved: false,
+    group: 1
+  },
+  {
+    title: 'Sort',
+    explanation: 'The sort() method sorts the items of an array. The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down). By default, the sort() method sorts the values as strings in alphabetical and ascending order.This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". Because of this, the sort() method will produce an incorrect result when sorting numbers.',
+    example:
+`var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.sort();
+// → [ 'Apple', 'Banana', 'Mango', 'Orange' ]`,
+    question: 'What does the following code log to the console?',
+    problem:
+`var arr = [1, -7, 0, -2, 5];
+console.log(arr.sort()[0]);`,
+    solution: '-2',
+    solved: false,
+    group: 3
+  },
+  {
+    title: 'Ternary Conditional',
+    explanation: '',
+    example:
+`console.log(true ? 1 : 2);
+// → 1
+console.log(false ? 1 : 2);
+// → 2`,
+    question: 'What does the following code log to the console?',
+    problem:
+`var comparator = 13 % 4 === 1 ? '>' : '<';
+console.log(\`javascript \${comparator} python\`);`,
+    solution: 'javascript > python',
+    solved: false,
+    group: 1
+  },
+  {
+    title: 'Recursion',
+    explanation: 'A function that calls itself is called recursive.',
+    example:
+`function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    return base * power(base, exponent - 1);
+  }
+}
+
+console.log(power(2, 3));
+// → 8`,
+    question: 'What does the following code return?',
+    problem:
+`function factorial(n) {
+  if (n <= 1) return 1;
+  return n * factorial(n - 1);
+}
+factorial(6);`,
+    solution: '720',
+    solved: false,
+    group: 2
+  }
 ];

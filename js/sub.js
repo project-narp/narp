@@ -2,6 +2,7 @@
 // var subList2 = document.getElementById('main');
 // Andrews code to store to / retrieve from localStorage
 if (!localStorage.getItem('allCards')){
+  allCards.sort((a, b) => a.group - b.group);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 } else {
   allCards = JSON.parse(localStorage.getItem('allCards'));

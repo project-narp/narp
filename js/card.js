@@ -12,6 +12,7 @@ if (!localStorage.getItem('cardIndex')){
 }
 
 if (!localStorage.getItem('allCards')){
+  allCards.sort((a, b) => a.group - b.group);
   localStorage.setItem('allCards', JSON.stringify(allCards));
 } else {
   allCards = JSON.parse(localStorage.getItem('allCards'));
