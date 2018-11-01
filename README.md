@@ -17,4 +17,12 @@ semantic versioning: no clue
 
 1. https://pixabay.com/photo-2024214/ --where image was used from
 
+2. Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
 
+3. Railscasts-like style (c) Visoft, Inc. (Damien White)
+
+4. Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+5. Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru> based on dark.css by Ivan Sagalaev
+
+6. highlight.js v9.13.1 | BSD3 License | git.io/hljslicense
