@@ -80,7 +80,6 @@ button {
   font-size: 80%;
   border: black;
   cursor: pointer;
-  margin-bottom: 10px;
 }
 
 button:hover {
