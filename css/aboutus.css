@@ -9,12 +9,12 @@ figure {
   background-color: white;
   margin: 10px auto;
   border-radius: 5px;
-  padding: 10px 12px; 
+  padding: 8px 14px; 
 }
 figcaption {
   float: left;
 }
-img {
+figure img {
   border-radius: 10%;
   height: 275px;
   width: 300px;
@@ -23,8 +23,8 @@ img {
   margin-left: 20%;
 }
 main {
-  width: 100%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 20%;
+  padding-left: 14%;
  }
