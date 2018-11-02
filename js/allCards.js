@@ -85,8 +85,8 @@ else {
   console.log('please adopt more cats');
 }`,
     question: 'what will the console.log resolve to? ',
-    problem: `
-var coffee = 'cold';
+    problem:
+`var coffee = 'cold';
 var drinkAndEnjoy = false;
 
 var microwaveCoffee = function (){
@@ -111,8 +111,7 @@ else {
   brewCoffee();  
 }
 
-console.log(coffee, drinkAndEnjoy);
-`,
+console.log(coffee, drinkAndEnjoy);`,
     solution: 'hot true',
     solved: false,
     group: 1,
@@ -121,15 +120,14 @@ console.log(coffee, drinkAndEnjoy);
     title: 'Array',
     explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
     example:
-  `var thisArray = [1,1,2,3,5,8];
-   thisArray[5] = 8;
-   //thisArray at index 5 gives you 8
-   thisArray.length(); = 6;
-   //thisArray is 6 indexes long but the last index is 5 because arrays always start at index 0
-  `,
+`var thisArray = [1,1,2,3,5,8];
+  thisArray[5] = 8;
+  //thisArray at index 5 gives you 8
+  thisArray.length(); = 6;
+  //thisArray is 6 indexes long but the last index is 5 because arrays always start at index 0`,
     question: 'What do the letters spell in the numbered indexes that are divisible by 3 of the below array?',
     problem:
-  'var questionArray = [1,z,f,c,o,a,o,w,k,d,g,h,e]',
+'var questionArray = [1,z,f,c,o,a,o,w,k,d,g,h,e]',
     solution: 'code',
     solved: false,
     group: 3
@@ -138,8 +136,8 @@ console.log(coffee, drinkAndEnjoy);
     //the opinions expresssed are ricks and ricks alone
     title: 'Object Literal',
     explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
-    example:`
-var = teacher{
+    example:
+`var = teacher{
   isChill: true,
   knwldgeLvl: 9001,
   favSaying: 'yeah',
@@ -148,8 +146,8 @@ var = teacher{
   },
 }`,
     question: 'Consider the below block of code.  What will the console log at the end display?',
-    problem:`
-var student1 = {
+    problem:
+`var student1 = {
   favAnimal: 'cat',
   favWeather: 'rain',
 };
@@ -166,8 +164,8 @@ console.log(student1.favWeather + student2.favWeapon);`,
   {
     title: 'Fun with Functions',
     explanation: 'Functions declarations are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to, until it\'s called it waits patiently, doing nothing.',
-    example: `
-var tired, playful, hungry;
+    example:
+`var tired, playful, hungry;
 var kittyCat = function (myArg){
 var behaviorsTired = ['cat nap', 'sleep for 18 hours', 'yawn and scratch', 'fall over', 'curl in a ball'];
 var behaviorsPlayful = ['catnip','run like primal beast','scratch and bite things that can hurt','find other cats and fight them', 'intimidate dogs 10 my size', 'walk across your keyboard and type nonsense','claw at your ear and rub your side', 'purr with intention and heart'];
@@ -184,19 +182,17 @@ return behaviorsHungry[Math.floor(Math.random() * behaviorsHungry.length)];
 }
 };
 kittyCat(playful);
-// → (will return a random string from behaviorsPlayful)
-`,
+// → (will return a random string from behaviorsPlayful)`,
     question: 'A \'true\' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by \'flicking\' the first one to start a chain reaction?',
-    problem: `
-var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
+    problem:
+`var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
 var flick = function(){
 for (var i = 0; i < dominosLinedUp.length; i ++){
   if (dominosLinedUp[i] === true){
     dominosLinedUp[i] = false;
     }
   }
-};
-    `,
+};`,
     solution: 'flick()',
     solved: false,
     group: 2,
@@ -245,7 +241,7 @@ console.log(arr.sort()[0]);`,
     reason: 'Since the sort method sorts numbers lexicographically, -2 comes before -7. The sorted array from above is <code>[ -2, -7, 0, 10, 5 ]</code>. The solution is to pass a comparison function into the sort method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Further Reading</a>'
   },
   {
-    title: 'Ternary Conditional',
+    title: 'Ternary Operator',
     explanation: 'This one is called the conditional operator (or sometimes just the ternary operator since it is the only such operator in the language). The value on the left of the question mark “picks” which of the other two values will come out. When it is true, it chooses the middle value, and when it is false, it chooses the value on the right.',
     example:
 `console.log(true ? 1 : 2);
@@ -293,21 +289,19 @@ var x = function(){
   }
 function y(){
   console.log('y');
-  }
-  x();
-  y();
-    `,
+}
+x();
+y();`,
     question: 'will the following code run or result in an error, enter true if it will run, enter false if it will break',
-    problem: `
-fishNum();
+    problem:
+`fishNum();
 fishColor();
 function fishNum() {
   console.log('One fish, two fish');
 }
 var fishColor = function(){
   console.log('Red fish, blue fish');
-};
-`,
+};`,
     solution: 'false',
     solved: false,
     group: 2,
@@ -315,8 +309,7 @@ var fishColor = function(){
   {
     title: 'For Loop',
     explanation: 'A for loop is a type of loop that executes over  a given range and performs given actions over the course of that range.',
-
-    example: 
+    example:
 `var lifespan = 80
 living = false;
 memories = [];
@@ -325,10 +318,9 @@ living = true;
 memories.push(year);
 }
 living = false;
-memories = [];
-`,
+memories = [];`,
     question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 9?',
-    problem: 
+    problem:
 `var fibby = function(fibLength){
   var oldMemory = 1;
   var newMemory = 1;
@@ -386,8 +378,8 @@ while(hungry === true){
 eat();
 }`,
     question: 'You\'re drowning at a depth of -50, how will you survive?',
-    problem: `
-var underwater = function(depth){
+    problem: 
+`var underwater = function(depth){
   var swimming = true;
   while (swimming){
     depth ++;
