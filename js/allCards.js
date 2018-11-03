@@ -1,12 +1,13 @@
+'use strict';
 
 var allCards = [
   {
-    title: 'Boolean',
-    explanation: 'Booleans are like an on or off switch, with only two possibilities, true or false',
+    title: 'Booleans',
+    explanation: 'Booleans are like an on or off switch, with only two possibilities, true or false.',
     example:
 `3 > 7
 // → false`,
-    question: 'Which boolean does the following evaluate to?',
+    question: 'What does the following evaluate to?',
     problem:
 '6 + 5 > 11 - 1',
     solution: 'true',
@@ -15,7 +16,7 @@ var allCards = [
   },
   {
     title: 'Order of Operations',
-    explanation: 'The logical operator || has the lowest precedence, followed by &&, then the comparison operators (>, ==, and so on), then the rest.',
+    explanation: 'The logical operator || has the lowest precedence, followed by &&, then the comparison operators (>, ==, and so on), then the rest. The arithmetic operators follow the normal PEMDAS order.',
     example:
 `2 * 0 || true == false
 // → false`,
@@ -41,7 +42,7 @@ var allCards = [
   },
   {
     title: 'Template Literals',
-    explanation: 'String literals use backticks (`) and allow you to pass in an expression to be evaluated inside the string. They also allow for multi line strings.',
+    explanation: 'String literals use backticks (`) and allow you to pass in an expression to be evaluated inside the string. They also allow for white space to be preserved in multi-line strings.',
     example:
 `\`3 * 7 is \${3 * 7}\`
 // → "3 * 7 is 21"`,
@@ -63,11 +64,12 @@ var allCards = [
 'typeof [1,2,3]',
     solution: 'object',
     solved: false,
-    group: 0
+    group: 0,
+    reason: 'Arrays are a special type of object in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Further Reading</a> on arrays. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">Further Reading</a> on the <code>typeof</code> operator.'
   },
   {
     title: 'Conditional Statements',
-    explanation: 'if, else if, and else test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
+    explanation: 'The keywords <code>if</code>, <code>else if</code>, and <code>else</code> test conditionals and can affect the flow of the program depending on the outcome of those conditionals',
     example:
 `var adoptSomeCats = function (){
   var howManyToAdopt = Math.floor(Math.random() * 10);
@@ -84,7 +86,7 @@ else if (howManyDidYouAdopt > 1) {
 else {
   console.log('please adopt more cats');
 }`,
-    question: 'what will the console.log resolve to? ',
+    question: 'What will the following code log to the console? ',
     problem:
 `var coffee = 'cold';
 var drinkAndEnjoy = false;
@@ -117,25 +119,24 @@ console.log(coffee, drinkAndEnjoy);`,
     group: 1,
   },
   {
-    title: 'Array',
-    explanation: 'An array is a data structure that stores information as a variable at numbered index points.',
+    title: 'Arrays',
+    explanation: 'An array is a data structure that stores information sequentially. Accessing values are done using <code>array[index]</code> notation. The length of the array can be ascertained by its <code>length</code> property.',
     example:
 `var thisArray = [1,1,2,3,5,8];
-  thisArray[5] = 8;
-  //thisArray at index 5 gives you 8
-  thisArray.length(); = 6;
-  //thisArray is 6 indexes long but the last index is 5 because arrays always start at index 0`,
-    question: 'What do the letters spell in the numbered indexes that are divisible by 3 of the below array?',
+// → 8
+thisArray.length;
+// → 6`,
+    question: 'What does the following log to the console?',
     problem:
-'var questionArray = [1,z,f,c,o,a,o,w,k,d,g,h,e]',
+`var arr = ['l','z','f','c','o','a','o','w','k','d','g','h','e'];
+console.log(arr[3] + arr[6] + arr[9] + arr[12]);`,
     solution: 'code',
     solved: false,
     group: 3
   },
   {
-    //the opinions expresssed are ricks and ricks alone
-    title: 'Object Literal',
-    explanation: 'An object literal is a data structure that stores information as a variable at named index points similarly to how an array functions with numbered points.',
+    title: 'Objects',
+    explanation: 'An object is a data structure that stores information as key/value pairs. Accessing the value can be done using <code>object["key"]</code> or <code>object.key</code> notations.',
     example:
 `var = teacher{
   isChill: true,
@@ -145,7 +146,7 @@ console.log(coffee, drinkAndEnjoy);`,
     this.knwldgeLvl++;
   },
 }`,
-    question: 'Consider the below block of code.  What will the console log at the end display?',
+    question: 'What does the following code log to the console?',
     problem:
 `var student1 = {
   favAnimal: 'cat',
@@ -163,29 +164,67 @@ console.log(student1.favWeather + student2.favWeapon);`,
 
   {
     title: 'Fun with Functions',
-    explanation: 'Functions declarations are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to, until it\'s called it waits patiently, doing nothing.',
+    explanation: 'Functions are like mini programs where you can write functionality into an enclosed code block, then execute it, or call it when you want to. Until it\'s called it waits patiently, doing nothing.',
     example:
-`var tired, playful, hungry;
-var kittyCat = function (myArg){
-var behaviorsTired = ['cat nap', 'sleep for 18 hours', 'yawn and scratch', 'fall over', 'curl in a ball'];
-var behaviorsPlayful = ['catnip','run like primal beast','scratch and bite things that can hurt','find other cats and fight them', 'intimidate dogs 10 my size', 'walk across your keyboard and type nonsense','claw at your ear and rub your side', 'purr with intention and heart'];
-var behaviorsHungry = ['take a small break from napping to overeat','gorge myself', 'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 'bite at my human until it swats me away','meow angrily till my human gives in and feeds me more'];
+`var kittyCat = function(myArg) {
+  var behaviorsTired = [
+    'cat nap', 
+    'sleep for 18 hours', 
+    'yawn and scratch', 
+    'fall over', 
+    'curl in a ball'
+  ];
+  var behaviorsPlayful = [
+    'catnip',
+    'run like primal beast',
+    'scratch and bite things that can hurt',
+    'find other cats and fight them', 
+    'intimidate dogs 10 my size', 
+    'walk across your keyboard and type nonsense',
+    'claw at your ear and rub your side', 
+    'purr with intention and heart'
+  ];
+  var behaviorsHungry = [
+    'take a small break from napping to overeat',
+    'gorge myself', 
+    'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 
+    'bite at my human until it swats me away',
+    'meow angrily till my human gives in and feeds me more'
+  ];
 
-if (myArg === tired){
-return behaviorsTired[Math.floor(Math.random() * behaviorsTired.length)];
-}
-else if (myArg === playful){
-return behaviorsPlayful[Math.floor(Math.random() * behaviorsPlayful.length)];
-}
-else if (myArg === hungry){
-return behaviorsHungry[Math.floor(Math.random() * behaviorsHungry.length)];
-}
+  if (myArg === 'tired') {
+    return behaviorsTired[Math.floor(Math.random() 
+      * behaviorsTired.length)];
+  } else if (myArg === 'playful') {
+    return behaviorsPlayful[Math.floor(Math.random() 
+      * behaviorsPlayful.length)];
+  }else if (myArg === 'hungry'){
+    return behaviorsHungry[Math.floor(Math.random() 
+      * behaviorsHungry.length)];
+  }
 };
-kittyCat(playful);
-// → (will return a random string from behaviorsPlayful)`,
-    question: 'A \'true\' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by \'flicking\' the first one to start a chain reaction?',
+console.log(kittyCat('playful'));
+// → (will log a random string from behaviorsPlayful)`,
+    question: 'A \'true\' domino is a domino that is standing and lined up, a false one is one that has been knocked over. How do can you knock over all these dominoes by \'flicking\' the first one to start a chain reaction? Don\'t forget to bring a semicolon!',
     problem:
-`var dominosLinedUp = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true];
+`var dominosLinedUp = [
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true
+];
 var flick = function(){
 for (var i = 0; i < dominosLinedUp.length; i ++){
   if (dominosLinedUp[i] === true){
@@ -193,7 +232,7 @@ for (var i = 0; i < dominosLinedUp.length; i ++){
     }
   }
 };`,
-    solution: 'flick()',
+    solution: 'flick();',
     solved: false,
     group: 2,
   },
@@ -222,7 +261,8 @@ if (true) {
 console.log(a * b);`,
     solution: '15',
     solved: false,
-    group: 1
+    group: 1,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let">Further Reading</a>'
   },
   {
     title: 'Sort',
@@ -238,7 +278,7 @@ console.log(arr.sort()[0]);`,
     solution: '-2',
     solved: false,
     group: 3,
-    reason: 'Since the sort method sorts numbers lexicographically, -2 comes before -7. The sorted array from above is <code>[ -2, -7, 0, 10, 5 ]</code>. The solution is to pass a comparison function into the sort method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Further Reading</a>'
+    reason: 'Since the sort method sorts numbers lexicographically, -2 comes before -7. The sorted array from above is <code>[-2, -7, 0, 10, 5]</code>. The solution is to pass a comparison function into the sort method: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort">Further Reading</a>'
   },
   {
     title: 'Ternary Operator',
@@ -254,7 +294,8 @@ console.log(false ? 1 : 2);
 console.log(\`javascript \${comparator} python\`);`,
     solution: 'javascript > python',
     solved: false,
-    group: 1
+    group: 1,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Further Reading</a>'
   },
   {
     title: 'Recursion',
@@ -282,17 +323,17 @@ factorial(6);`,
     group: 2
   },{
     title: 'Function Declaration and Expression',
-    explanation: 'besides from the syntax differences, the biggest difference between these two types of functions is that function declarations can be called above or below where it is defined, whereas function expressions behave like other variables and can only be called below the definition',
-    example: `
-var x = function(){
+    explanation: 'Besides from the syntax differences, the biggest difference between these two types of functions is that function declarations can be called above or below where it is defined, whereas function expressions behave like other variables and can only be called below the definition.',
+    example:
+`var x = function(){
   console.log('x');  
-  }
+}
 function y(){
   console.log('y');
 }
 x();
 y();`,
-    question: 'will the following code run or result in an error, enter true if it will run, enter false if it will break',
+    question: 'Will the following code run or result in an error, enter <code>true</code> if it will run, enter <code>false</code> if it will break.',
     problem:
 `fishNum();
 fishColor();
@@ -314,12 +355,12 @@ var fishColor = function(){
 living = false;
 memories = [];
 for (year = 0; year < lifespan; year ++){
-living = true;  
-memories.push(year);
+  living = true;  
+  memories.push(year);
 }
 living = false;
 memories = [];`,
-    question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 9?',
+    question: 'What will the following code return? And food for thought, should the store Forever 21 rebrand as Forever Fibonacci 8?',
     problem:
 `var fibby = function(fibLength){
   var oldMemory = 1;
@@ -377,8 +418,8 @@ var eat = function (){
 while(hungry === true){
 eat();
 }`,
-    question: 'You\'re drowning at a depth of -50, how will you survive?',
-    problem: 
+    question: 'You\'re drowning at a depth of -50, how will you survive? Don\'t forget to bring a semicolon!',
+    problem:
 `var underwater = function(depth){
   var swimming = true;
   while (swimming){
@@ -387,7 +428,7 @@ eat();
       swimming = false;
     }
   }
-  console.log('hurray you didn\'t drown!');
+  console.log("hurray you didn't drown!");
 };`,
     solution: 'underwater(-50);',
     solved: false,
