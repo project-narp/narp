@@ -187,7 +187,7 @@ console.log(student1.favWeather + student2.favWeapon);`,
   var behaviorsHungry = [
     'take a small break from napping to overeat',
     'gorge myself', 
-    'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 
+    'kill a lessor animal for fun, eat part of it, leave the rest', 
     'bite at my human until it swats me away',
     'meow angrily till my human gives in and feeds me more'
   ];
@@ -434,6 +434,37 @@ eat();
     solved: false,
     group: 1,
   },
+
+  {
+    title: 'Arrow Functions',
+    explanation: 'Arrow functions are function expressions (with one caveat - the <code>this</code> keyword does not refer to its containing object) written in a different syntax. The arrow comes after the list of parameters and is followed by the function’s body. It expresses something like “this input (the parameters) produces this result (the body)”. When there is only one parameter name, you can omit the parentheses around the parameter list. If the body is a single expression, rather than a block in braces, that expression will be returned from the function. When an arrow function has no parameters at all, its parameter list is just an empty set of parentheses.',
+    example:
+`var doubleSum = (a, b) => {
+  return (a + b) * 2;
+};
+var timesTwo = x => x * 2;
+var pi = () => Math.PI;
+console.log(doubleSum(3, 5));
+// → 16
+console.log(timesTwo(8));
+// → 16
+console.log(pi());
+// → 3.141592653589793`,
+    question: 'What does the following log to the console?',
+    problem:
+`var whats = thisThing => {
+  if (thisThing.toLowerCase() === 'updog') {
+    console.log('Not much and you?');
+  } else {
+    console.log('Who knows?');
+  }
+};
+whats('Updog');`,
+    solution: 'Not much and you?',
+    solved: false,
+    group: 2,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Further Reading</a>'
+  }
 ];
 
 
@@ -448,3 +479,4 @@ eat();
 // solution
 // solved
 // group
+// reason
