@@ -37,7 +37,10 @@ article {
     /* font-family: 'Francois One', sans-serif; */
     margin-bottom: 20px;
 }
-
+article p {
+    color: white;
+    font-size: 1.25em;
+}
 /* main li{
     display: block;    
 } */
