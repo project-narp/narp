@@ -266,7 +266,7 @@ console.log(a * b);`,
   },
   {
     title: 'Sort',
-    explanation: 'The sort() method sorts the items of an array. The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down). By default, the sort() method sorts the values as strings in alphabetical and ascending order.This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". Because of this, the sort() method will produce an incorrect result when sorting numbers.',
+    explanation: 'The <code>sort</code> method sorts the items of an array. The sort order can be either alphabetic or numeric, and either ascending (up) or descending (down). By default, the <code>sort</code> method sorts the values as strings in alphabetical and ascending order. This works well for strings ("Apple" comes before "Banana"). However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1". Because of this, the <code>sort</code> method will produce an incorrect result when sorting numbers.',
     example:
 `var fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 fruits.sort();
@@ -416,7 +416,7 @@ var eat = function (){
   var digestion = stomach.push(eating);
 };
 while(hungry === true){
-eat();
+  eat();
 }`,
     question: 'You\'re drowning at a depth of -50, how will you survive? Don\'t forget to bring a semicolon!',
     problem:
