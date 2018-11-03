@@ -1,6 +1,5 @@
 'use strict';
 
-
 var cardForm = document.getElementById('cardForm');
 
 var Card = function(title, explanation, example, question, problem, solution, group, reason){
