@@ -1,5 +1,5 @@
 # Project NARP
-## Built by: Andrew Davis, Peter Murphy, Richard Bellamy and Nikki Carthen
+## Built by: [Andrew Davis](https://andavi.github.io/), Peter Murphy, Richard Bellamy and Nikki Carthen
 
 **Description**
 
@@ -26,3 +26,7 @@ semantic versioning: no clue
 5. Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru> based on dark.css by Ivan Sagalaev
 
 6. highlight.js v9.13.1 | BSD3 License | git.io/hljslicense
+
+**Topic Ideas**
+
+1. [Eloquent JavaScript](http://eloquentjavascript.net/)
