@@ -416,7 +416,7 @@ var eat = function (){
   var digestion = stomach.push(eating);
 };
 while(hungry === true){
-eat();
+  eat();
 }`,
     question: 'You\'re drowning at a depth of -50, how will you survive? Don\'t forget to bring a semicolon!',
     problem:
