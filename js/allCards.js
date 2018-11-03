@@ -187,7 +187,7 @@ console.log(student1.favWeather + student2.favWeapon);`,
   var behaviorsHungry = [
     'take a small break from napping to overeat',
     'gorge myself', 
-    'kill a lessor animal for fun, eat part of it, leave the rest to intimidate its family and friends', 
+    'kill a lessor animal for fun, eat part of it, leave the rest', 
     'bite at my human until it swats me away',
     'meow angrily till my human gives in and feeds me more'
   ];
@@ -434,6 +434,109 @@ eat();
     solved: false,
     group: 1,
   },
+
+  {
+    title: 'Arrow Functions',
+    explanation: 'Arrow functions are function expressions (with one caveat - the <code>this</code> keyword does not refer to its containing object) written in a different syntax. The arrow comes after the list of parameters and is followed by the function’s body. It expresses something like “this input (the parameters) produces this result (the body)”. When there is only one parameter name, you can omit the parentheses around the parameter list. If the body is a single expression, rather than a block in braces, that expression will be returned from the function. When an arrow function has no parameters at all, its parameter list is just an empty set of parentheses.',
+    example:
+`var doubleSum = (a, b) => {
+  return (a + b) * 2;
+};
+var timesTwo = x => x * 2;
+var pi = () => Math.PI;
+console.log(doubleSum(3, 5));
+// → 16
+console.log(timesTwo(8));
+// → 16
+console.log(pi());
+// → 3.141592653589793`,
+    question: 'What does the following log to the console?',
+    problem:
+`var whats = thisThing => {
+  if (thisThing.toLowerCase() === 'updog') {
+    console.log('Not much and you?');
+  } else {
+    console.log('Who knows?');
+  }
+};
+whats('Updog');`,
+    solution: 'Not much and you?',
+    solved: false,
+    group: 2,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Further Reading</a>'
+  },
+
+  {
+    title: 'Map',
+    explanation: 'The <code>map</code> method transforms an array by applying a function to all of its elements and building a new array from the returned values. The new array will have the same length as the input array, but its content will have been mapped to a new form by the function.',
+    example:
+`var arr = [1, 2, 3, 4];
+arr.map(n => n * n);
+// → [1, 4, 9, 16]`,
+    question: 'What does the following log to the screen?',
+    problem:
+`var bartenders = [
+  {name: 'Dennis', spiritAnimal: 'cat', beersDeep: 7},
+  {name: 'Mac', spiritAnimal: 'dog', beersDeep: 8},
+  {name: 'Charlie', spiritAnimal: 'rat', beersDeep: 12},
+  {name: 'Dee', spiritAnimal: 'bird', beersDeep: 11}
+];
+var peter = bartenders.map(o => o.name)[2];
+console.log(peter);`,
+    solution: 'Charlie',
+    solved: false,
+    group: 3,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Further Reading</a>'
+  },
+
+  {
+    title: 'Filter',
+    explanation: 'The <code>filter</code> array method creates a new array based on the condition passed into it.',
+    example:
+`var arr = [1, 2, 3, 4];
+arr.filter(n => n % 2 === 1);
+// → [1, 3]`,
+    question: 'What does the following log to the console?',
+    problem:
+`var bartenders = [
+  {name: 'Dennis', spiritAnimal: 'cat', beersDeep: 7},
+  {name: 'Mac', spiritAnimal: 'dog', beersDeep: 8},
+  {name: 'Charlie', spiritAnimal: 'rat', beersDeep: 12},
+  {name: 'Dee', spiritAnimal: 'bird', beersDeep: 11}
+];
+var numBirds = bartenders.filter(o => o.spiritAnimal === 'bird').length;
+var plural = numBirds === 1 ? '' : 's';
+console.log(\`Only \${numBirds} bird\${plural} working tonight.\`)`,
+    solution: 'Only 1 bird working tonight.',
+    solved: false,
+    group: 3,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">Further Reading</a>'
+  }, 
+
+  {
+    title: 'Reduce',
+    explanation: 'The <code>reduce</code> method executes a reducer function (that you provide) on each member of the array resulting in a single output value. It builds a value by repeatedly taking a single element from the array and combining it with the current value. When summing numbers, you’d start with the number zero and, for each element, add that to the sum.',
+    example:
+`var arr = [1, 2, 3, 4];
+arr.reduce((a, n) => a + n);
+// → 10`,
+    question: 'If a second argument is provided to the <code>reduce</code> method, that will be the initial value of the accumulator. Otherwise it will start as the first element of the array. What does the following log to the console?',
+    problem:
+`var bartenders = [
+  {name: 'Dennis', spiritAnimal: 'cat', beersDeep: 7},
+  {name: 'Mac', spiritAnimal: 'dog', beersDeep: 8},
+  {name: 'Charlie', spiritAnimal: 'rat', beersDeep: 12},
+  {name: 'Dee', spiritAnimal: 'bird', beersDeep: 11}
+];
+var numBeers = bartenders.filter(o => o.spiritAnimal !== 'bird').reduce((a, o) => {
+  return a + o.beersDeep;
+}, 0);
+console.log(\`The nonbirds are \${numBeers} beers deep.\`);`,
+    solution: 'The nonbirds are 27 beers deep.',
+    solved: false,
+    group: 3,
+    reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce">Further Reading</a>'
+  }
 ];
 
 
@@ -448,3 +551,4 @@ eat();
 // solution
 // solved
 // group
+// reason

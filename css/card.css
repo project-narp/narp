@@ -1,7 +1,7 @@
 #container {
   text-align: center;
   margin: 30px auto;
-  width: 60%;
+  width: 70%;
   border: 1px solid black;
   border-radius: 10px;
   padding: 20px;
@@ -26,6 +26,7 @@ p {
 
 code {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 110%;
 }
 
 pre>code {
