@@ -482,8 +482,8 @@ arr.map(n => n * n);
   {name: 'Dee', spiritAnimal: 'bird', beersDeep: 11}
 ];
 var peter = bartenders.map(o => o.name)[2];
-console.log(peter);`,
-    solution: 'Charlie',
+console.log(\`Peter is \${peter}.\`);`,
+    solution: 'Peter is Charlie.',
     solved: false,
     group: 3,
     reason: '<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map">Further Reading</a>'
