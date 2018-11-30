@@ -45,7 +45,7 @@ var allCards = [
     explanation: 'String literals use backticks (`) and allow you to pass in an expression to be evaluated inside the string. They also allow for white space to be preserved in multi-line strings.',
     example:
 `\`3 * 7 is \${3 * 7}\`
-// → "3 * 7 is 21"`,
+// → 3 * 7 is 21`,
     question: 'What does the whole line evaluate to?',
     problem:
 '`a third of 99 is ${99 / 3}`',
